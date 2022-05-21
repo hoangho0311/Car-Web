@@ -85,12 +85,12 @@ a{
 	position: absolute;
 	color: white;
 	top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 900;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 900;
 	letter-spacing: 5px;
 	line-height: 80px;
 }
@@ -177,6 +177,33 @@ a{
 	outline: navajowhite;
 	font-size: 1.4rem;
 	padding: 10px 0;
+}
+/*-----drop menu-----*/
+ul{
+	list-style-type: none;
+}
+.ul_list{
+	display: none;
+}
+.ul_list li{
+	color: black;
+	padding: 0.5rem 1rem;
+	border-radius: 0.2rem;
+	transition: pink 200ms ease-in-out;
+}
+.ul_list li a{
+	color: black;
+}
+.item-left-menu .financedrop.dropactive .ul_list{
+	display: block;
+	position: absolute;
+	top: 5rem;
+	left: 0rem;
+	box-shadow: 0 0 2px gray;
+	background-color: white;
+	width: 8rem;
+	padding: 1rem;
+	gap: 0.5rem;
 }
 
 /*-------------------------------------------------*/
@@ -468,82 +495,7 @@ li a .detail-h4{
 .active-img{
 	display: block;
 }
-}*/*/
-/*page hero*/
-/*.page{
-	height: 33vw;
-	margin-bottom: 50px;
-}
-.page-test{
-    vertical-align: top;
-    font-size: 16px;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-.page-hero{
-	background-image: url("imgpage-tran/pic2.png");
-    height: 33vw;
-    background-size: cover;   
-    padding: 32px;
-    box-sizing: border-box;
-
-    display: flex;
-}
-.page-left{
-	flex: 30%;
-	text-align: left;
-}
-.page-left a{
-	margin: 200px auto;
-	position: relative;
-}
-.page-right{
-	flex: 70%;
-}
-.page-left h2{
-	margin-top: 40px;
-	font-weight: 200;
-    letter-spacing: .02885em;
-    font-size: 3.2rem;
-    line-height: 1.07692;
-    color: rgb(255, 205, 0);
-    animation-delay: 200ms;
-}
-.page-left h3{
-	text-align: left;
-	color: #fff;
-    font-size: 18px;
-    line-height: 22px;
-    margin: 0 0 32px;
-    font-family: futura-book;
-    white-space: normal;
-}
-.home_btn{
-	position: relative;
-	border-bottom: 2px solid hsl(158, 89%, 30%);
-	width: 70px;
-	height: 70px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	justify-self: center;
-	color: white;
-}
-
-.home_btn::before{
-	content: "";
-	border: 2px solid hsl(158, 98%, 43%);
-	width: 90px;
-	height: 90px;
-	position: absolute;
-	border-radius: 50%;
-	box-shadow: 0 0 12px hsl(158, 98%, 43%);
-	transition: 0.3s;
-	animation: button 3s infinite;
 }*/
-
 /*-------List-cars-----*/
 .list-cars-container{
 
@@ -609,33 +561,6 @@ li a .detail-h4{
 	padding: 10px;
 	width: 100%;
 }
-/*drop menu*/
-ul{
-	list-style-type: none;
-}
-.ul_list{
-	display: none;
-}
-.ul_list li{
-	color: black;
-	padding: 0.5rem 1rem;
-	border-radius: 0.2rem;
-	transition: pink 200ms ease-in-out;
-}
-.ul_list li a{
-	color: black;
-}
-.item-left-menu .financedrop.dropactive .ul_list{
-	display: block;
-	position: absolute;
-	top: 5rem;
-	left: 0rem;
-	box-shadow: 0 0 2px gray;
-	background-color: white;
-	width: 8rem;
-	padding: 1rem;
-	gap: 0.5rem;
-}
 
 /*-------Cars---------*/
 .container-car{
@@ -651,12 +576,13 @@ ul{
 }
 .row-cars{
 	display: flex;
-	flex-wrap: wrap;	
+	flex-wrap: wrap;
 }
 .col-cars{
-	flex: 20%;
+	flex: 30%;
 	padding: 20px;
 	margin: 10px;
+	max-width: 350px;
 }
 .col-cars span{
 	color: black;
@@ -669,6 +595,7 @@ ul{
 }
 .col-cars img{
 	width: 100%;
+	object-fit: cover;
 }
 .col-descar{
 	display: flex;
@@ -704,9 +631,54 @@ ul{
 .text-car-best p{
 	color: black;
 	padding:10px 10px 0 ;
-
+}
+.product-car{
+	display: flex;
+	flex-wrap: wrap;
+	height: 120vh;
+	padding: 20px;
 }
 
+.list-choose-car{
+	flex: 20%;
+	padding: 10px;
+	border-right: 0.7px solid black;
+}
+.btn-choose-car{
+	display: flex;
+	flex-direction: column;
+}
+.btn-choose-car button{
+	padding: 10px;
+	border: none;
+	background: white;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+.list-choose-car h2{
+	color: black;
+}
+.list-product-car{
+	flex: 80%;
+	height: 110vh;
+	overflow-y: scroll;
+	font-family: 'Dosis', sans-serif;
+}
+.list-product-car::-webkit-scrollbar{
+	display: none;
+}
+.title-product{
+	display: flex;
+	justify-content: space-between;
+}
+.h4-tagName{
+	font-size: 1.1rem;
+}
+/*search car*/
+.search-car{
+	margin: 40px 40px 0;
+	padding: 10px 20px;
+}
 /*-------------services----------------*/
 .services{
 	color: black;
@@ -1190,6 +1162,11 @@ top: 6rem;
 		padding: 10px 20px 10px 0;
 		color: white;
 	}
+}
 
-
+/*else*/
+@media only screen and (max-width: 400px){
+	.overview-text{
+		display: none;
+	}
 }

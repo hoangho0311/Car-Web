@@ -197,233 +197,332 @@
 		</div>
 	</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script type="text/javascript">
-		$(document).on('click','.deal-link',function(){
-			$(this).addClass('imgactive').siblings().removeClass('imgactive')
-		})
-
-		const icons = document.querySelector('.icon-search');
-		const search=document.querySelector('.search');
-		const dealer = document.querySelector('.deal-link');
-		const furniture = document.querySelector('.furniture-btn');
-		const furnitureimg = document.querySelector('.furniture-img');
-		const frontbtn =document.querySelector('.front-btn');
-		const frontimg = document.querySelector('.front-img');
-		const backbtn =document.querySelector('.back-btn');
-		const backimg = document.querySelector('.back-img');
-		const leftbtn =document.querySelector('.left-btn');
-		const leftimg = document.querySelector('.left-img');
-
-		// list-car
-		const listcars01 = document.querySelector('.list-cars-01')
-		const listcars02 = document.querySelector('.list-cars-02')
-		const listcars03 = document.querySelector('.list-cars-03')
-		const listcars04 = document.querySelector('.list-cars-04')
-		const listcars05 = document.querySelector('.list-cars-05')
-		const listcarsimg01 = document.querySelector('.list-cars-img-01')
-		const listcarsimg02 = document.querySelector('.list-cars-img-02')
-		const listcarsimg03 = document.querySelector('.list-cars-img-03')
-		const listcarsimg04 = document.querySelector('.list-cars-img-04')
-		const listcarsimg05 = document.querySelector('.list-cars-img-05')
-
-
-		listcars01.onclick=function(){
-			$(this).addClass('active-choose').siblings().removeClass('active-choose')
-			// listcars01.classList.toggle('active-choose')
-			$(listcarsimg01).addClass('active-list-img').siblings().removeClass('active-list-img')
-			// listcarsimg01.classList.toggle('active-list-img')
-		}
-		listcars02.onclick=function(){
-			$(this).addClass('active-choose').siblings().removeClass('active-choose')
-			// listcars01.classList.toggle('active-choose')
-			$(listcarsimg02).addClass('active-list-img').siblings().removeClass('active-list-img')
-		}
-		listcars03.onclick=function(){
-			$(this).addClass('active-choose').siblings().removeClass('active-choose')
-			// listcars01.classList.toggle('active-choose')
-			$(listcarsimg03).addClass('active-list-img').siblings().removeClass('active-list-img')
-		}
-		listcars04.onclick=function(){
-			$(this).addClass('active-choose').siblings().removeClass('active-choose')
-			// listcars01.classList.toggle('active-choose')
-			$(listcarsimg04).addClass('active-list-img').siblings().removeClass('active-list-img')
-		}
-		listcars05.onclick=function(){
-			$(this).addClass('active-choose').siblings().removeClass('active-choose')
-			// listcars01.classList.toggle('active-choose')
-			$(listcarsimg05).addClass('active-list-img').siblings().removeClass('active-list-img')
-		}
-
-		// overview
-		furniture.onclick=function(){
-			furnitureimg.classList.toggle('active-furniture-img')
-		}
-		frontbtn.onclick=function(){
-			frontimg.classList.toggle('active-furniture-img')
-		}
-		backbtn.onclick=function(){
-			backimg.classList.toggle('active-furniture-img')
-		}
-		leftbtn.onclick=function(){
-			leftimg.classList.toggle('active-furniture-img')
-		}
-
-
-
-		icons.onclick = function(){
-			search.classList.toggle('active')
-		}
-
-		const financedrop = document.querySelector('.financedrop');
-		financedrop.onclick = function(){
-			financedrop.classList.toggle('dropactive');
-		}
-	</script>
+	
 
 		<!------------ Cars  ------------------>
 <div class="container-car">
 	<div class="reviewcar">
-		<h2 class="title-list title-list-review">Our vehicles</h2>
-		<div class="owl-carousel owl-theme row-cars">
-			<div class="col-cars item">
-				<a href=""><h4>A-Class</h4>
-				<img src="carsDeal/iris.png">
-				<div class="descar">
-					<div class="row-descar">
-						<div class="col-descar">
-							<h5>Engine</h5>
-							<h5>Max torque</h5>
-							<h5>Max output</h5>
-						</div>
-						<div class="col-descar">
-							<p>I4 1.33L</p>
-							<p>250 N⋅m</p>
-							<p>163 hp</p>
-						</div>
+		<div class="title-product">
+			<h2 class="title-list title-list-review">Our vehicles</h2>
+			<form>
+				<input class="search-car" type="text" id="search-item" name="" placeholder="Search products" onkeyup="searchcar()">
+			</form>
+		</div>
+		
+		<div class="product-car">
+			<div class="list-choose-car">
+				<h2>Types</h2>
+					<div class="btn-choose-car">
+						<button>Ferrari</button>
+						<button>Roll royce</button>
+						<button>Mercedes</button>
 					</div>
 				</div>
+			<div class="list-product-car" id="list-product-car">
+				<div class="row-cars" id="row-car">
+					<div class="col-cars">
+						<a href=""><h4 class="h4-tagName">Mercedes A-Class</h4>
+						<img src="carsDeal/iris.png">
+						<div class="descar">
+							<div class="row-descar">
+								<div class="col-descar">
+									<h5>Engine</h5>
+									<h5>Max torque</h5>
+									<h5>Max output</h5>
+								</div>
+								<div class="col-descar">
+									<p>I4 1.33L</p>
+									<p>250 N⋅m</p>
+									<p>163 hp</p>
+								</div>
+							</div>
+						</div>
 
-				</a>
-			</div>
-			<div class="col-cars item">
-				<a href=""><h4>Mercedes-Maybach S-Class</h4>
-				<img src="carsDeal/mercedesMayBach.png">
-				<div class="descar">
-					<div class="row-descar">
-						<div class="col-descar">
-							<h5>Engine</h5>
-							<h5>Max torque</h5>
-							<h5>Max output</h5>
-						</div>
-						<div class="col-descar">
-							<p>I4 1.33L</p>
-							<p>250 N⋅m</p>
-							<p>163 hp</p>
-						</div>
+						</a>
 					</div>
-				</div>
-				</a>
-			</div>
-			<div class="col-cars item">
-				<a href=""><h4>G-Class</h4>
-				<img src="carsDeal/mercedesg14.png">
-				<div class="descar">
-					<div class="row-descar">
-						<div class="col-descar">
-							<h5>Engine</h5>
-							<h5>Max torque</h5>
-							<h5>Max output</h5>
+					<div class="col-cars ">
+						<a href=""><h4 class="h4-tagName">Mercedes-Maybach S-Class</h4>
+						<img src="carsDeal/mercedesMayBach.png">
+						<div class="descar">
+							<div class="row-descar">
+								<div class="col-descar">
+									<h5>Engine</h5>
+									<h5>Max torque</h5>
+									<h5>Max output</h5>
+								</div>
+								<div class="col-descar">
+									<p>I4 1.33L</p>
+									<p>250 N⋅m</p>
+									<p>163 hp</p>
+								</div>
+							</div>
 						</div>
-						<div class="col-descar">
-							<p>I4 1.33L</p>
-							<p>250 N⋅m</p>
-							<p>163 hp</p>
-						</div>
+						</a>
 					</div>
-				</div>
-				</a>
-			</div>
-			<div class="col-cars item">
-				<a href=""><h4>Mercedes-AMG</h4>
-				<img src="carsDeal/mercedesAMG.png">
-				<div class="descar">
-					<div class="row-descar">
-						<div class="col-descar">
-							<h5>Engine</h5>
-							<h5>Max torque</h5>
-							<h5>Max output</h5>
+					<div class="col-cars ">
+						<a href=""><h4 class="h4-tagName">G-Class</h4>
+						<img src="carsDeal/mercedesg14.png">
+						<div class="descar">
+							<div class="row-descar">
+								<div class="col-descar">
+									<h5>Engine</h5>
+									<h5>Max torque</h5>
+									<h5>Max output</h5>
+								</div>
+								<div class="col-descar">
+									<p>I4 1.33L</p>
+									<p>250 N⋅m</p>
+									<p>163 hp</p>
+								</div>
+							</div>
 						</div>
-						<div class="col-descar">
-							<p>I4 1.33L</p>
-							<p>250 N⋅m</p>
-							<p>163 hp</p>
-						</div>
+						</a>
 					</div>
-				</div>
-				</a>
-			</div>
-			<div class="col-cars item">
-				<a href=""><h4>Lamborghini Urus</h4>
-				<img src="carsDeal/Lamborghini-Urus.png">
-				<div class="descar">
-					<div class="row-descar">
-						<div class="col-descar">
-							<h5>Engine</h5>
-							<h5>Max torque</h5>
-							<h5>Max output</h5>
+				
+					<div class="col-cars ">
+						<a href=""><h4 class="h4-tagName">Lamborghini Aventador</h4>
+						<img src="carsDeal/lambo-adven.png">
+						<div class="descar">
+							<div class="row-descar">
+								<div class="col-descar">
+									<h5>Engine</h5>
+									<h5>Max torque</h5>
+									<h5>Max output</h5>
+								</div>
+								<div class="col-descar">
+									<p>I4 1.33L</p>
+									<p>250 N⋅m</p>
+									<p>163 hp</p>
+								</div>
+							</div>
 						</div>
-						<div class="col-descar">
-							<p>I4 1.33L</p>
-							<p>250 N⋅m</p>
-							<p>163 hp</p>
-						</div>
+
+						</a>
 					</div>
-				</div>
-				</a>
-			</div>
-			<div class="col-cars item">
-				<a href=""><h4>Rolls-Royce Phantom</h4>
-				<img src="carsDeal/rolls-royce-phantom.png">
-				<div class="descar">
-					<div class="row-descar">
-						<div class="col-descar">
-							<h5>Engine</h5>
-							<h5>Max torque</h5>
-							<h5>Max output</h5>
+					<div class="col-cars ">
+						<a href=""><h4 class="h4-tagName">Lamborghini Urus</h4>
+						<img src="carsDeal/Lamborghini-Urus.png">
+						<div class="descar">
+							<div class="row-descar">
+								<div class="col-descar">
+									<h5>Engine</h5>
+									<h5>Max torque</h5>
+									<h5>Max output</h5>
+								</div>
+								<div class="col-descar">
+									<p>I4 1.33L</p>
+									<p>250 N⋅m</p>
+									<p>163 hp</p>
+								</div>
+							</div>
 						</div>
-						<div class="col-descar">
-							<p>I4 1.33L</p>
-							<p>250 N⋅m</p>
-							<p>163 hp</p>
-						</div>
+						</a>
 					</div>
-				</div>
-				</a>
-			</div>
-			<div class="col-cars item">
-				<a href=""><h4>Tesla Model S</h4>
-				<img src="carsDeal/tesla-model-s-2020.png">
-				<div class="descar">
-					<div class="row-descar">
-						<div class="col-descar">
-							<h5>Engine</h5>
-							<h5>Max torque</h5>
-							<h5>Max output</h5>
+					<div class="col-cars ">
+						<a href=""><h4 class="h4-tagName">Lamborghini Huracan</h4>
+						<img src="carsDeal/lambo-hucan.png">
+						<div class="descar">
+							<div class="row-descar">
+								<div class="col-descar">
+									<h5>Engine</h5>
+									<h5>Max torque</h5>
+									<h5>Max output</h5>
+								</div>
+								<div class="col-descar">
+									<p>I4 1.33L</p>
+									<p>250 N⋅m</p>
+									<p>163 hp</p>
+								</div>
+							</div>
 						</div>
-						<div class="col-descar">
-							<p>I4 1.33L</p>
-							<p>250 N⋅m</p>
-							<p>163 hp</p>
-						</div>
+						</a>
 					</div>
-				</div>
-				</a>
+					
+					<div class="col-cars ">
+						<a href=""><h4 class="h4-tagName">Audi R8</h4>
+						<img src="carsDeal/audi-r8.png">
+						<div class="descar">
+							<div class="row-descar">
+								<div class="col-descar">
+									<h5>Engine</h5>
+									<h5>Max torque</h5>
+									<h5>Max output</h5>
+								</div>
+								<div class="col-descar">
+									<p>I4 1.33L</p>
+									<p>250 N⋅m</p>
+									<p>163 hp</p>
+								</div>
+							</div>
+						</div>
+						</a>
+					</div>
+				
+					<div class="col-cars ">
+						<a href=""><h4 class="h4-tagName">Mercedes-AMG</h4>
+						<img src="carsDeal/mercedesAMG.png">
+						<div class="descar">
+							<div class="row-descar">
+								<div class="col-descar">
+									<h5>Engine</h5>
+									<h5>Max torque</h5>
+									<h5>Max output</h5>
+								</div>
+								<div class="col-descar">
+									<p>I4 1.33L</p>
+									<p>250 N⋅m</p>
+									<p>163 hp</p>
+								</div>
+							</div>
+						</div>
+						</a>
+					</div>
+					
+					<div class="col-cars ">
+						<a href=""><h4 class="h4-tagName">Rolls-Royce Phantom</h4>
+						<img src="carsDeal/rolls-royce-phantom.png">
+						<div class="descar">
+							<div class="row-descar">
+								<div class="col-descar">
+									<h5>Engine</h5>
+									<h5>Max torque</h5>
+									<h5>Max output</h5>
+								</div>
+								<div class="col-descar">
+									<p>I4 1.33L</p>
+									<p>250 N⋅m</p>
+									<p>163 hp</p>
+								</div>
+							</div>
+						</div>
+						</a>
+					</div>
+				
+					<div class="col-cars ">
+						<a href=""><h4 class="h4-tagName">Ferrari 458 Italia</h4>
+						<img src="carsDeal/ferrari-itali.png">
+						<div class="descar">
+							<div class="row-descar">
+								<div class="col-descar">
+									<h5>Engine</h5>
+									<h5>Max torque</h5>
+									<h5>Max output</h5>
+								</div>
+								<div class="col-descar">
+									<p>I4 1.33L</p>
+									<p>250 N⋅m</p>
+									<p>163 hp</p>
+								</div>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="col-cars ">
+						<a href=""><h4 class="h4-tagName">Ferrari Roma</h4>
+						<img src="carsDeal/ferrari-roma.png">
+						<div class="descar">
+							<div class="row-descar">
+								<div class="col-descar">
+									<h5>Engine</h5>
+									<h5>Max torque</h5>
+									<h5>Max output</h5>
+								</div>
+								<div class="col-descar">
+									<p>I4 1.33L</p>
+									<p>250 N⋅m</p>
+									<p>163 hp</p>
+								</div>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="col-cars ">
+						<a href=""><h4 class="h4-tagName">Ferrari SP48 Unica unveiled</h4>
+						<img src="carsDeal/ferrari-sp48.png">
+						<div class="descar">
+							<div class="row-descar">
+								<div class="col-descar">
+									<h5>Engine</h5>
+									<h5>Max torque</h5>
+									<h5>Max output</h5>
+								</div>
+								<div class="col-descar">
+									<p>I4 1.33L</p>
+									<p>250 N⋅m</p>
+									<p>163 hp</p>
+								</div>
+							</div>
+						</div>
+						</a>
+					</div>
+				
+					<div class="col-cars ">
+						<a href=""><h4 class="h4-tagName">Vinfast LUX A2.0</h4>
+						<img src="carsDeal/vinfastLuxa2.0.png">
+						<div class="descar">
+							<div class="row-descar">
+								<div class="col-descar">
+									<h5>Engine</h5>
+									<h5>Max torque</h5>
+									<h5>Max output</h5>
+								</div>
+								<div class="col-descar">
+									<p>I4 1.33L</p>
+									<p>250 N⋅m</p>
+									<p>163 hp</p>
+								</div>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="col-cars ">
+						<a href=""><h4 class="h4-tagName">Vinfast LUX SA2.0</h4>
+						<img src="carsDeal/vinfast.png">
+						<div class="descar">
+							<div class="row-descar">
+								<div class="col-descar">
+									<h5>Engine</h5>
+									<h5>Max torque</h5>
+									<h5>Max output</h5>
+								</div>
+								<div class="col-descar">
+									<p>I4 1.33L</p>
+									<p>250 N⋅m</p>
+									<p>163 hp</p>
+								</div>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="col-cars ">
+						<a href=""><h4>Tesla Model S</h4>
+						<img src="carsDeal/tesla-model-s-2020.png">
+						<div class="descar">
+							<div class="row-descar">
+								<div class="col-descar">
+									<h5>Engine</h5>
+									<h5>Max torque</h5>
+									<h5>Max output</h5>
+								</div>
+								<div class="col-descar">
+									<p>I4 1.33L</p>
+									<p>250 N⋅m</p>
+									<p>163 hp</p>
+								</div>
+							</div>
+						</div>
+						</a>
+					</div>
+				
 			</div>
 		</div>
 	</div>
+		
+			
+		
+	</div>
 	<div class="cars-best">
-		<div class="car-best-flex">
+		<!-- <div class="car-best-flex">
 			<div class="text-car-best">
 				<h2 class="title-list title-list-review">Our vehicles</h2>
 				<p>A declaration of freedom, Urus enables you to discover any terrain, from track to sand, ice, gravel or rocks. It allows you to explore new paths and new ways to express yourself—to accept challenges confidently and to live life to the fullest.</p>
@@ -433,7 +532,7 @@
 			</div>
 			
 			
-		</div>
+		</div> -->
 	
 	</div>
 </div>
@@ -470,7 +569,7 @@
 			</div>
 		</div>
 	</div>
-
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<!-- -------------Logo------------------ -->
 	<div class="logo-container">
 		<div class="logo-content">
@@ -630,7 +729,7 @@
 		$('.owl-carousel').owlCarousel({
 	    loop:true,
 	    margin:10,
-	    autoplay:true,
+	    autoplay:false,
 	    nav:false,
 	    dots:false,
 	    responsive:{

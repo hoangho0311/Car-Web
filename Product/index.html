@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+	<div class="header-container">
+		<div class="menu">
+				<div class="menu-item">
+					<div class="item-left">
+						<a href="#" class="brand">DINGUCAR</a>
+						<ul class="item-left-menu">
+							<li class="li-item"><a href="" class="item-font">Home</a></li>
+							<li class="li-item"><a href="" class="item-font">Store</a></li>
+							<li class="li-item"><a href="" class="item-font">Services</a></li>
+							<li class="li-item"><div href="" class="item-font financedrop">More<i class="ri-arrow-down-s-fill"></i>
+								<ul class="ul_list">
+									<li><a href="">test</a></li>
+									<li><a href="">test</a></li>
+									<li><a href="">test</a></li>
+								</ul>
+							</div></li>
+							<li class="li-item"><a href="#news" class="item-font">News</a></li>
+						</ul>		
+					</div>
+				<div class="item-right">
+							<div class="search">
+								<div class="icon-search"></div>
+								<div class="input">
+									<input type="text" placeholder="Search">
+								</div>
+							</div>
+							<a href="" class="item-right icon"><i class="ri-heart-line"></i></a>
+							<a href="" class="item-font icon"><i class="ri-user-line"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const icons = document.querySelector('.icon-search');
+		const search=document.querySelector('.search');
+		icons.onclick = function(){
+			search.classList.toggle('active')
+		}
+
+		const financedrop = document.querySelector('.financedrop');
+		financedrop.onclick = function(){
+			financedrop.classList.toggle('dropactive');
+		}
+	</script>
+</body>
+</html>

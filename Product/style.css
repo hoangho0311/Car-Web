@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@300&family=Inconsolata&family=Saira+Condensed:wght@300&display=swap');
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-family: Helvetica-Light,Helvetica,Arial,sans-serif;
+	background: white;
+	color: black;
+}
+.logo{
+	padding-top: 10px;
+}
+a{
+	text-decoration: none;
+}
+
+.header-container{
+	max-width: 100%;
+	position: relative;
+	min-height: 100vh;
+	background: #000;
+}
+.menu{
+	max-width: 1300px;
+	margin: auto;
+}
+/*logo*/
+.brand{
+	color: #fff;
+	font-size: 1.7em;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 25px 10px;
+}
+/*menu list*/
+.menu a{
+	color: white;
+}
+.menu-item{
+	font-family: 'Dosis', sans-serif;
+	display: flex;
+	justify-content: space-between;
+	max-width: 1300px;
+	margin: auto;
+}
+.item-left{
+	z-index: 99;
+	display: flex;
+}
+.item-left-menu{
+	display: flex;
+}
+.item-left-menu .li-item{
+	padding: 30px 20px 0;
+}
+.item-right{
+	z-index: 99;
+	display: flex;
+}
+.item-right i{
+	font-size: 1.7rem;
+}
+.icon{
+	padding: 27px 10px 0;
+}
+.financedrop{
+	vertical-align: center;
+	cursor: pointer;
+	color: white;
+}
+
+/*-------------------search----------------*/
+.search{
+	margin-top: 25px;
+	margin-right: 10px;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	transition: 0.5s;
+	box-shadow: 0 0 5px #2573ef;
+	overflow: hidden;
+}
+.search.active{
+	width: 200px;
+}
+.search .icon-search{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 30px;
+	height: 30px;;
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	cursor: pointer;
+}
+.search .icon-search::before{
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	transform: translate(-3px,-3px );
+}
+.search .icon-search::after{
+	content: "";
+	position: absolute;
+	width: 1.5px;
+	height: 10px;
+	background:#fff;
+	transform: translate(6px,6px) rotate(315deg);
+}
+.search .input{
+	position: relative;
+	width: 300px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search .input input{
+	position: absolute;
+	top: 0;
+	left: 2.5rem;
+	background: black;
+	color: white;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: navajowhite;
+	font-size: 1.4rem;
+	padding: 10px 0;
+}
+/*-----drop menu-----*/
+ul{
+	list-style-type: none;
+}
+.ul_list{
+	display: none;
+}
+.ul_list li{
+	color: black;
+	padding: 0.5rem 1rem;
+	border-radius: 0.2rem;
+	transition: pink 200ms ease-in-out;
+}
+.ul_list li a{
+	color: black;
+}
+.item-left-menu .financedrop.dropactive .ul_list{
+	display: block;
+	position: absolute;
+	top: 5rem;
+	left: 0rem;
+	box-shadow: 0 0 2px gray;
+	background-color: white;
+	width: 8rem;
+	padding: 1rem;
+	gap: 0.5rem;
+}
+
+/*-------------------------------------------------*/
+.item-font{
+	font-size: 1.1rem;
+}
+.li-item{
+	position: relative;
+	color: #ee6352;
+}
+.li-item a::after{
+	content: "";
+	position: absolute;
+	background: #fff;
+	width: 0;
+	height: 2px;
+	bottom: 5px;
+	left: 0;
+	transform: translate(1.1rem,-1.2rem);
+	transition: 0.3s ease;
+}
+.li-item a:hover::after{
+	width: 60%;
+}
