@@ -520,7 +520,7 @@ li a .detail-h4{
 	min-height: 100vh;	
 }
 .list-cars-choose{
-	flex: 40%;
+	flex: 38%;
 	padding: 20px 20px;
 }
 .list-cars-choose .choose-btn{
@@ -676,8 +676,9 @@ li a .detail-h4{
 }
 /*search car*/
 .search-car{
-	margin: 40px 40px 0;
-	padding: 10px 20px;
+	margin-top: 40px ;
+	padding: 10px 0;
+	width: 100%;
 }
 /*-------------services----------------*/
 .services{
@@ -1018,16 +1019,16 @@ top: 6rem;
 		padding: 10px;
 	}
 	.overview-button .img-car{
-	opacity: 0;
-	width: 100px;
-	border-radius: 7px;
-	transition: .3s ease;
+		opacity: 0;
+		width: 100px;
+		border-radius: 7px;
+		transition: .3s ease;
 	}
 	.img-car.active-furniture-img{
-	opacity: 1;
+		opacity: 1;
 	}
 	.col-overview h3{
-	font-size: 0.5rem;
+		font-size: 0.5rem;
 	}
 	.col-overview p{
 		font-size: 0.3rem;
@@ -1041,16 +1042,16 @@ top: 6rem;
 		font-size: 0.5rem;
 	}
 	.title-list{
-	padding: 40px 40px 0;
-	font-size: 1.2rem;
-	font-weight: 600;
-	font-family: 'Dosis', sans-serif;
+		padding: 40px 40px 0;
+		font-size: 1.2rem;
+		font-weight: 600;
+		font-family: 'Dosis', sans-serif;
 	}
 	.col-services{
 		flex: 100%;
 	}
 	.home-content h3{
-	font-size: 0.8rem;
+		font-size: 0.8rem;
 	}
 	.home-content h2{
 		color: rgb(5, 134, 142);
@@ -1168,5 +1169,31 @@ top: 6rem;
 @media only screen and (max-width: 400px){
 	.overview-text{
 		display: none;
+	}
+	.logo-container{
+		display: none;
+	}
+	.overview-button .img-car{
+		opacity: 0;
+		width: 90px;
+		border-radius: 7px;
+		transition: .3s ease;
+	}
+	.img-car.active-furniture-img{
+	opacity: 1;
+	}
+	.list-product-car{
+		height: 70vh;
+	}
+	.product-car{
+		height: 100vh;
+	}
+	.list-cars-choose{
+		padding: 20px 10px;
+	}
+	.list-cars-choose .choose-btn .list-cars-btn{
+		width: 80px;
+		padding: 6px;
+		font-size: 0.35rem;
 	}
 }
