@@ -1,3 +1,4 @@
+// animation
 const sr = ScrollReveal({
 	origin:'left',
 	distance:'60px',
@@ -37,6 +38,7 @@ window.addEventListener('scroll',reveal);
 			$(this).addClass('imgactive').siblings().removeClass('imgactive')
 		})
 
+// click js
 		const icons = document.querySelector('.icon-search');
 		const search=document.querySelector('.search');
 		const dealer = document.querySelector('.deal-link');
@@ -101,9 +103,7 @@ window.addEventListener('scroll',reveal);
 		}
 		leftbtn.onclick=function(){
 			leftimg.classList.toggle('active-furniture-img')
-		}
-
-
+		}	
 
 		icons.onclick = function(){
 			search.classList.toggle('active')
@@ -135,4 +135,180 @@ const searchcar = ()=>{
 			}
 		}
 	}
+}	
+
+const searchcartypeFerrari = ()=>{
+	const searchType = document.querySelectorAll(".type1");
+	$(searchType).addClass('active-choose-type').siblings().removeClass('active-choose-type');
+	const searchbox = document.getElementById("btn-type-ferra").value.toUpperCase() ;
+	const storeitems = document.getElementById("row-car")
+	const product  = document.querySelectorAll(".col-cars")
+	const pname = storeitems.getElementsByTagName("h4")
+
+	for (var i = 0; i < pname.length; i++) {
+		let match = product[i].getElementsByTagName('h4')[0];
+
+		if (match) {
+			let textValue = match.textContent || match.innerHTML
+
+			if (textValue.toUpperCase().indexOf(searchbox) > -1) {
+				product[i].style.display = "";
+			}else{
+				product[i].style.display = "none";
+			}
+		}
+	}
 }
+const searchcartypeRollRoyce = ()=>{
+	const searchType = document.querySelectorAll(".type2");
+	$(searchType).addClass('active-choose-type').siblings().removeClass('active-choose-type');
+	const searchbox = document.getElementById("btn-type-rollRoyce").value.toUpperCase() ;
+	const storeitems = document.getElementById("row-car")
+	const product  = document.querySelectorAll(".col-cars")
+	const pname = storeitems.getElementsByTagName("h4")
+
+	for (var i = 0; i < pname.length; i++) {
+		let match = product[i].getElementsByTagName('h4')[0];
+
+		if (match) {
+			let textValue = match.textContent || match.innerHTML
+
+			if (textValue.toUpperCase().indexOf(searchbox) > -1) {
+				product[i].style.display = "";
+			}else{
+				product[i].style.display = "none";
+			}
+		}
+	}
+}
+const searchcartypeMercedes = ()=>{
+	const searchType = document.querySelectorAll(".type3");
+	$(searchType).addClass('active-choose-type').siblings().removeClass('active-choose-type');
+	const searchbox = document.getElementById("btn-type-Mercedes").value.toUpperCase() ;
+	const storeitems = document.getElementById("row-car")
+	const product  = document.querySelectorAll(".col-cars")
+	const pname = storeitems.getElementsByTagName("h4")
+
+	for (var i = 0; i < pname.length; i++) {
+		let match = product[i].getElementsByTagName('h4')[0];
+
+		if (match) {
+			let textValue = match.textContent || match.innerHTML
+
+			if (textValue.toUpperCase().indexOf(searchbox) > -1) {
+				product[i].style.display = "";
+			}else{
+				product[i].style.display = "none";
+			}
+		}
+	}
+}
+const searchcartypeLambor = ()=>{
+	const searchType = document.querySelectorAll(".type4");
+	$(searchType).addClass('active-choose-type').siblings().removeClass('active-choose-type');
+	const searchbox = document.getElementById("btn-type-Lambor").value.toUpperCase() ;
+	const storeitems = document.getElementById("row-car")
+	const product  = document.querySelectorAll(".col-cars")
+	const pname = storeitems.getElementsByTagName("h4")
+
+	for (var i = 0; i < pname.length; i++) {
+		let match = product[i].getElementsByTagName('h4')[0];
+
+		if (match) {
+			let textValue = match.textContent || match.innerHTML
+
+			if (textValue.toUpperCase().indexOf(searchbox) > -1) {
+				product[i].style.display = "";
+			}else{
+				product[i].style.display = "none";
+			}
+		}
+	}
+}
+const searchcartypeTesla = ()=>{
+	const searchType = document.querySelectorAll(".type6");
+	$(searchType).addClass('active-choose-type').siblings().removeClass('active-choose-type');
+	const searchbox = document.getElementById("btn-type-Tesla").value.toUpperCase() ;
+	const storeitems = document.getElementById("row-car")
+	const product  = document.querySelectorAll(".col-cars")
+	const pname = storeitems.getElementsByTagName("h4")
+
+	for (var i = 0; i < pname.length; i++) {
+		let match = product[i].getElementsByTagName('h4')[0];
+
+		if (match) {
+			let textValue = match.textContent || match.innerHTML
+
+			if (textValue.toUpperCase().indexOf(searchbox) > -1) {
+				product[i].style.display = "";
+			}else{
+				product[i].style.display = "none";
+			}
+		}
+	}
+}
+const searchcartypeVin = ()=>{
+	const searchType = document.querySelectorAll(".type5");
+	$(searchType).addClass('active-choose-type').siblings().removeClass('active-choose-type');
+	const searchbox = document.getElementById("btn-type-Vin").value.toUpperCase() ;
+	const storeitems = document.getElementById("row-car")
+	const product  = document.querySelectorAll(".col-cars")
+	const pname = storeitems.getElementsByTagName("h4")
+
+	for (var i = 0; i < pname.length; i++) {
+		let match = product[i].getElementsByTagName('h4')[0];
+
+		if (match) {
+			let textValue = match.textContent || match.innerHTML
+
+			if (textValue.toUpperCase().indexOf(searchbox) > -1) {
+				product[i].style.display = "";
+			}else{
+				product[i].style.display = "none";
+			}
+		}
+	}
+}
+
+const alltype = ()=>{
+	const searchType = document.querySelectorAll(".type7");
+	$(searchType).addClass('active-choose-type').siblings().removeClass('active-choose-type');
+	const searchbox = document.getElementById("btn-all-type").value.toUpperCase() ;
+	const storeitems = document.getElementById("row-car")
+	const product  = document.querySelectorAll(".col-cars")
+	const pname = storeitems.getElementsByTagName("h4")
+
+	for (var i = 0; i < pname.length; i++) {
+		let match = product[i].getElementsByTagName('h4')[0];
+
+		if (match) {
+			let textValue = match.textContent || match.innerHTML
+
+			if (textValue.toUpperCase().indexOf(searchbox) > -1) {
+				product[i].style.display = "";
+			}else{
+				product[i].style.display = "";
+			}
+		}
+	}
+}
+
+// drop responsive
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+
+for (var i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active-drop");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+ function dropProductCar() {
+ 	var element = document.getElementById("product-car");
+	element.classList.toggle("active-drop-list");
+ }

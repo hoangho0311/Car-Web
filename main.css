@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@300&family=Inconsolata&family=Saira+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;1,600&family=Bebas+Neue&family=Dosis:wght@300&family=Fjalla+One&family=Frank+Ruhl+Libre:wght@300;400&family=Inconsolata&family=Raleway:ital,wght@1,200&family=Saira+Condensed:wght@300&display=swap');
 *{
 	box-sizing: border-box;
 	padding: 0;
@@ -396,106 +396,6 @@ ul{
 	font-size: 1.7rem;
 }
 
-/*-------------------dealer-page-----------------*/
-
-/*.best-dealer-page{
-	height: 100vh;
-	padding: 30px 10px;
-}
-.dealer-content{
-	display: flex;
-	flex-wrap: wrap;
-}
-.dealer-col-left{
-	flex: 45%;
-}
-.dealer-col-left .deal-cars{
-	margin-left: 70px;
-}
-.deal-cars{
-	position: relative;
-	padding: 10% 0;
-}
-.deal-cars li{
-	z-index: 90;
-	position: absolute;
-	border-bottom: 1px solid;
-	width: 580px;
-	cursor: pointer;
-	transition: .5s ease;
-}
-.deal-cars .deal-link{
-	display: flex;
-}
-.deal-links{
-	flex: 90%;
-	padding: 30px ;
-	transition: .5s ease;
-}
-.deal-a{
-	flex: 10%;
-}
-.link1{
-	margin-top: 20px;
-}
-.link2{
-	margin-top: 100px;
-}
-.link3{
-	margin-top: 180px;
-}
-.link4{
-	margin-top: 260px;
-}
-.link5{
-	margin-top: 340px;
-}
-.detail-h4{
-	color: #000;
-	opacity: 0;
-}
-li a .detail-h4{
-	background-color: white;
-	padding: 30px;
-}
-.deal-cars li:hover{
-	background-color: red;
-	cursor: pointer;
-	width: 725px;
-}
-.deal-cars li:hover .detail-h4{
-	opacity: 1;
-}
-.deal-cars li:hover .deal-a{
-	background-color: white;
-}
-.deal-cars{
-	position: absolute;
-}
-.deal-cars li div{
-	display: flex;
-	text-decoration: none;
-	color: #fff;
-}
-.deal-cars li div h4{
-	margin-right: 10px;
-}
-.dealer-col-right{
-	position: relative;
-	flex: 54%;
-}
-.dealer-col-right img{
-	z-index: 2;
-	width: 100%;
-	height: 100%;
-}
-.dealer-img{
-	display: none;
-}
-.active-img{
-	display: block;
-}
-}*/
 /*-------List-cars-----*/
 .list-cars-container{
 
@@ -590,8 +490,8 @@ li a .detail-h4{
 }
 .col-cars h4{
 	color: black;
-	font-size: 1.2rem;
-	font-weight: 700;
+	font-size: 1.5rem;
+	text-align: center;
 }
 .col-cars img{
 	width: 100%;
@@ -637,32 +537,55 @@ li a .detail-h4{
 	flex-wrap: wrap;
 	height: 120vh;
 	padding: 20px;
-}
+	font-family: 'Dosis', sans-serif;
 
+}
 .list-choose-car{
-	flex: 20%;
+	flex: 18%;
 	padding: 10px;
 	border-right: 0.7px solid black;
 }
 .btn-choose-car{
 	display: flex;
 	flex-direction: column;
+	border-bottom: 1px solid black;
 }
-.btn-choose-car button{
+.btn-choose-type-car{
+	opacity: .7;
+}
+.btn-choose-type-car.active-choose-type{
+	opacity: 1;
+}
+.btn-choose-type-car.active-choose-type input{
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+.btn-choose-type-car.all-type{
+	padding: 0;
+}
+.types-car input, button{
+	text-align: left;
+	width: 100%;
 	padding: 10px;
-	border: none;
 	background: white;
 	cursor: pointer;
-	margin-bottom: 10px;
+	border: none;
+	font-size: 1.2rem;
+	font-family: 'Dosis', sans-serif;
 }
-.list-choose-car h2{
+.types-car h2{
 	color: black;
 }
+.types-car.all-type h2{
+	color: black;
+}
+.types-car.all-type input{
+
+}
 .list-product-car{
-	flex: 80%;
+	flex: 79%;
 	height: 110vh;
 	overflow-y: scroll;
-	font-family: 'Dosis', sans-serif;
 }
 .list-product-car::-webkit-scrollbar{
 	display: none;
@@ -673,6 +596,17 @@ li a .detail-h4{
 }
 .h4-tagName{
 	font-size: 1.1rem;
+}
+.btn-choose-type-car img{
+	padding: 8px 0 0;
+	width: 30px;
+	height: 40px;
+}
+.btn-choose-type-car{
+	display: flex;
+	padding: 10px 40px;
+	
+	cursor: pointer;
 }
 /*search car*/
 .search-car{
@@ -934,12 +868,30 @@ top: 6rem;
 		text-decoration: none;
 		border-radius: 15px;
 	}
-	.header-container video{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	object-fit: cover;
+	.list-product-car{
+		height: 70vh;
+	}
+	.product-car{
+		height: 80vh;
+	}
+	.product-car.active-drop-list{
+		height: 120vh;
+	}
+	.list-choose-car{
+		border: none;
+	}
+	.product-car{
+		display: block;
+	}
+	.col-cars{
+		max-width: 300px;
+	}
+	.ri-list-unordered{
+		color: black;
+	}
+	.btn-choose-car{
+		display: none;
+		transition: 0.5s ease;
 	}
 	.search.active{
 	width: 100px;
@@ -1107,7 +1059,7 @@ top: 6rem;
 	}
 
 	/*footer*/
-	.brand.footer{
+	/*.brand.footer{
 		font-size: 1.4rem;
 		padding: 0 30%;
 	}
@@ -1163,7 +1115,7 @@ top: 6rem;
 		padding: 10px 20px 10px 0;
 		color: white;
 	}
-}
+}*/
 
 /*else*/
 @media only screen and (max-width: 412px){

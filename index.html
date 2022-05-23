@@ -111,65 +111,7 @@
 			</div>
 		</div>
 	</div>
-	<!-------- dealer --------->
-	<!-- <div class="best-dealer-page">
-		<div class="dealer-content">
-			<div class="dealer-col-left">
-				<ul class="deal-cars">
-					<li class="link1">
-						<div class="deal-link">
-							<div class="deal-links">
-								<h4>01</h4>
-								<h3>CARS</h3>
-							</div>
-							<a href="" class="deal-a"><h4 class="detail-h4">DETAIL</h4></a>
-						</div>
-					</li>
-					<li class="link2">
-						<div class="deal-link">
-							<div class="deal-links">
-								<h4>01</h4>
-								<h3>CARS</h3>
-							</div>
-							<a href="" class="deal-a"><h4 class="detail-h4">DETAIL</h4></a>
-						</div>
-					</li>
-					<li class="link3">
-						<div class="deal-link">
-							<div class="deal-links">
-								<h4>01</h4>
-								<h3>CARS</h3>
-							</div>
-							<a href="" class="deal-a"><h4 class="detail-h4">DETAIL</h4></a>
-						</div>
-					</li>
-					<li class="link4">
-						<div class="deal-link">
-							<div class="deal-links">
-								<h4>01</h4>
-								<h3>CARS</h3>
-							</div>
-							<a href="" class="deal-a"><h4 class="detail-h4">DETAIL</h4></a>
-						</div>
-					</li>
-					<li class="link5">
-						<div class="deal-link">
-							<div class="deal-links">
-								<h4>01</h4>
-								<h3>CARS</h3>
-							</div>
-							<a href="" class="deal-a"><h4 class="detail-h4">DETAIL</h4></a>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="dealer-col-right">
-				<a href=""><img src="test.png" class="dealer-img active-img " ></a>
-				<a href=""><img src="test.png" class="dealer-img " ></a>
-				<a href=""><img src="test.png" class="dealer-img " ></a>
-			</div>
-		</div>
-	</div> -->
+	
 	<!-- -------list-cars------ -->
 	<div class="list-cars">
 	<div class="list-cars-container reveal">
@@ -209,15 +151,45 @@
 			</form>
 		</div>
 		
-		<div class="product-car">
+		<div class="product-car" id="product-car">
 			<div class="list-choose-car">
-				<h2>Types</h2>
-					<div class="btn-choose-car">
-						<button>Ferrari</button>
-						<button>Roll royce</button>
-						<button>Mercedes</button>
+				<div class="types-car">
+						<h2>Types</h2>
+						<button class="dropdown-btn drop-btn" onclick="dropProductCar()"><i class="ri-list-unordered"></i></button>
+							<div class="btn-choose-car" id="btn-choose-car">
+							<button class="btn-choose-type-car type1">
+								<img src="logoChooseCar/ferrari-logo-C75D80471C-seeklogo.com.png">
+								<input type="button" id="btn-type-ferra" class="btn-type" onclick="searchcartypeFerrari()" value="Ferrari"></input>
+							</button>
+							<button class="btn-choose-type-car type2">
+								<img src="logoChooseCar/90f0f75a94e18564c375e1fd1d49ac89.png">
+								<input type="button" id="btn-type-rollRoyce" class="btn-type" onclick="searchcartypeRollRoyce()" value="Roll"></input>
+							</button>
+							<button class="btn-choose-type-car type3">
+								<img src="logoChooseCar/800px-Mercedes-Logo.svg.png">
+								<input type="button" id="btn-type-Mercedes" class="btn-type" onclick="searchcartypeMercedes()" value="Mercedes"></input>
+							</button>
+							<button class="btn-choose-type-car type4">
+								<img src="logoChooseCar/672px-Lamborghini_Logo.svg.png">
+								<input type="button" id="btn-type-Lambor" class="btn-type" onclick="searchcartypeLambor()" value="Lamborghini"></input>
+							</button>
+							<button class="btn-choose-type-car type5">
+								<img src="logoChooseCar/logo-vinfast.png">
+								<input type="button" id="btn-type-Vin" class="btn-type" onclick="searchcartypeVin()" value="Vinfast"></input>
+							</button>
+							<button class="btn-choose-type-car type6">
+								<img src="logoChooseCar/Tesla_T_symbol.svg.png">
+								<input type="button" id="btn-type-Tesla" class="btn-type" onclick="searchcartypeTesla()" value="Tesla"></input>
+							</button>
+							<button class="btn-choose-type-car type7 all-type">
+								<input type="button" id="btn-all-type" onclick="alltype()" value="ALL"></input>
+							</button>
+							</div>
+						
 					</div>
 				</div>
+				
+				
 			<div class="list-product-car" id="list-product-car">
 				<div class="row-cars" id="row-car">
 					<div class="col-cars">
@@ -724,26 +696,5 @@
 	<script type="text/javascript" src="scrollreveal.min.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script type="text/javascript">
-		$('.owl-carousel').owlCarousel({
-	    loop:true,
-	    margin:10,
-	    autoplay:false,
-	    nav:false,
-	    dots:false,
-	    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:4
-        }
-    }
-	})
-	</script>
 </body>
 </html>
