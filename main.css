@@ -933,10 +933,10 @@ top: 6rem;
 		box-shadow: 0 0 1px hsl(158, 98%, 43%);
 	}
 	.furniture-btn{
-	transform: translate(1090%,340%);
+	transform: translate(950%,340%);
 	}
 	.front-btn{
-		transform: translate(1420%,410%);
+		transform: translate(1240%,410%);
 	}
 	.back-btn{
 		transform: translate(400%,200%);
@@ -945,10 +945,10 @@ top: 6rem;
 		transform: translate(450%,300%);
 	}
 	.furniture-img{
-		transform: translate(260%,-8%);
+		transform: translate(240%,-8%);
 	}
 	.front-img{
-		transform: translate(340%,50%);
+		transform: translate(300%,50%);
 	}
 	.back-img{
 		transform: translate(-7%,-50%);
@@ -1122,7 +1122,7 @@ top: 6rem;
 		transform: translate(220%,-8%);
 	}
 	.front-img{
-		transform: translate(380%,50%);
+		transform: translate(360%,50%);
 	}
 	.back-img{
 		transform: translate(-7%,-95%);
