@@ -589,6 +589,9 @@ ul{
 .types-car.all-type input{
 
 }
+.dropdown-btn{
+	display: none;
+}
 .list-product-car{
 	flex: 79%;
 	height: 110vh;
@@ -790,7 +793,7 @@ top: 6rem;
 
 
 /*-----responsive------*/
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1080px) and (min-width: 768px){
   .description-flex{
 		display: block;
 	}
@@ -903,16 +906,19 @@ top: 6rem;
 	.search.active{
 	width: 100px;
 	}
+	.dropdown-btn{
+	display: block;
+	}
 }
 /*------mobile---------*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-width: 412px){
   .description-flex{
 		display: block;
 	}
 	.carOverview{
-	height: 50vh;
-	position: relative;
-	margin-bottom: 100px;
+		height: 50vh;
+		position: relative;
+		margin-bottom: 100px;
 	}
 	.button-car{
 		border-bottom: 0.5px solid hsl(158, 89%, 30%);
@@ -1050,10 +1056,13 @@ top: 6rem;
 	.footer_content.content1{
 		display: none;
 	}
+	.dropdown-btn{
+	display: block;
+	}
 
 
 /*else*/
-@media only screen and (max-width: 412px){
+@media only screen and (max-width: 412px) {
 	.logo-container{
 		display: none;
 	}
@@ -1074,6 +1083,7 @@ top: 6rem;
 	}
 	.product-car{
 		height: 100vh;
+		display: block;
 	}
 	.list-cars-choose{
 		padding: 20px 10px;
@@ -1085,5 +1095,8 @@ top: 6rem;
 	}
 	.col-cars{
 		max-width: 180px;
+	}
+	.dropdown-btn{
+	display: block;
 	}
 }
