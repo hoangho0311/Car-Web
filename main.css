@@ -1056,7 +1056,7 @@ top: 6rem;
 	}
 }
 /*else*/
-@media only screen and (max-width: 412px)  {
+@media only screen and (max-width: 480px)  {
 	.logo-container{
 		display: none;
 	}
@@ -1068,13 +1068,13 @@ top: 6rem;
 		transition: .3s ease;
 	}
 	.product-car.active-drop-list{
-		height: 135vh;
+		height: 150vh;
 	}
 	.img-car.active-furniture-img{
 	opacity: 1;
 	}
 	.list-product-car{
-		height: 82vh;
+		height: 85vh;
 	}
 	.product-car{
 		height: 100vh;
