@@ -794,7 +794,7 @@ top: 6rem;
 
 
 /*-----responsive------*/
-@media only screen and (max-width: 1080px) and (min-width: 768px){
+@media only screen and (max-width: 920px) and (min-width: 768px){
   .description-flex{
 		display: block;
 	}
@@ -901,6 +901,7 @@ top: 6rem;
 		color: black;
 	}
 	.btn-choose-car{
+		display: none;
 		transition: 0.5s ease;
 	}
 	.search.active{
@@ -911,7 +912,7 @@ top: 6rem;
 	}
 }
 /*------mobile---------*/
-@media only screen and (max-width: 768px) and (min-width: 481px) {
+@media only screen and (max-width: 768px){
   .description-flex{
 		display: block;
 	}
@@ -995,6 +996,10 @@ top: 6rem;
 		font-weight: 600;
 		font-family: 'Dosis', sans-serif;
 	}
+	.btn-choose-car{
+		display: none;
+		transition: 0.5s ease;
+	}
 	.col-services{
 		flex: 100%;
 	}
@@ -1014,16 +1019,6 @@ top: 6rem;
 		font-size: 0.8em;
 		text-decoration: none;
 		border-radius: 15px;
-	}
-	.header-container video{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	object-fit: cover;
-	}
-	.search.active{
-	width: 100px;
 	}
 	.logo-content img{
 	width: 30px;
@@ -1059,13 +1054,13 @@ top: 6rem;
 	.dropdown-btn{
 	display: block;
 	}
-
-
+}
 /*else*/
-@media only screen and (max-width: 480px) and (min-width: 360px) {
+@media only screen and (max-width: 412px)  {
 	.logo-container{
 		display: none;
 	}
+
 	.overview-button .img-car{
 		opacity: 0;
 		width: 90px;
