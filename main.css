@@ -1068,13 +1068,13 @@ top: 6rem;
 		transition: .3s ease;
 	}
 	.product-car.active-drop-list{
-		height: 150vh;
+		height: 160vh;
 	}
 	.img-car.active-furniture-img{
 	opacity: 1;
 	}
 	.list-product-car{
-		height: 85vh;
+		height: 82vh;
 	}
 	.product-car{
 		height: 100vh;
@@ -1103,6 +1103,9 @@ top: 6rem;
 }
 /*mobile */
 @media only screen and (max-width: 360px){
+	.search-car{
+		margin-top: 70px;
+	}
 	.overview-button .img-car{
 		width: 75px;
 	}
