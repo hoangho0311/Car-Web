@@ -109,10 +109,10 @@ window.addEventListener('scroll',reveal);
 			search.classList.toggle('active')
 		}
 
-		const financedrop = document.querySelector('.financedrop');
-		financedrop.onclick = function(){
-			financedrop.classList.toggle('dropactive');
-		}
+		// const financedrop = document.querySelector('.financedrop');
+		// financedrop.onclick = function(){
+		// 	financedrop.classList.toggle('dropactive');
+		// }
 
 
 // search car

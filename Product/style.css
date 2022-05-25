@@ -7,8 +7,6 @@
 }
 body{
 	font-family: Helvetica-Light,Helvetica,Arial,sans-serif;
-	background: white;
-	color: black;
 }
 .logo{
 	padding-top: 10px;
@@ -20,12 +18,11 @@ a{
 .header-container{
 	max-width: 100%;
 	position: relative;
-	min-height: 100vh;
-	background: #000;
+	color: black;
 }
 .menu{
-	max-width: 1300px;
-	margin: auto;
+	border-bottom: 0.5px solid;
+
 }
 /*logo*/
 .brand{
@@ -38,7 +35,7 @@ a{
 }
 /*menu list*/
 .menu a{
-	color: white;
+	color: black;
 }
 .menu-item{
 	font-family: 'Dosis', sans-serif;
@@ -70,7 +67,7 @@ a{
 .financedrop{
 	vertical-align: center;
 	cursor: pointer;
-	color: white;
+	color: black;
 }
 
 /*-------------------search----------------*/
@@ -106,7 +103,7 @@ a{
 	position: absolute;
 	width: 8px;
 	height: 8px;
-	border: 3px solid #fff;
+	border: 3px solid #000;
 	border-radius: 50%;
 	transform: translate(-3px,-3px );
 }
@@ -115,7 +112,7 @@ a{
 	position: absolute;
 	width: 1.5px;
 	height: 10px;
-	background:#fff;
+	background:#000;
 	transform: translate(6px,6px) rotate(315deg);
 }
 .search .input{
@@ -130,8 +127,8 @@ a{
 	position: absolute;
 	top: 0;
 	left: 2.5rem;
-	background: black;
-	color: white;
+	background: white;
+	color: black;
 	width: 100%;
 	height: 100%;
 	border: none;
@@ -140,34 +137,11 @@ a{
 	padding: 10px 0;
 }
 /*-----drop menu-----*/
-ul{
-	list-style-type: none;
-}
-.ul_list{
-	display: none;
-}
-.ul_list li{
-	color: black;
-	padding: 0.5rem 1rem;
-	border-radius: 0.2rem;
-	transition: pink 200ms ease-in-out;
-}
-.ul_list li a{
-	color: black;
-}
-.item-left-menu .financedrop.dropactive .ul_list{
-	display: block;
-	position: absolute;
-	top: 5rem;
-	left: 0rem;
-	box-shadow: 0 0 2px gray;
-	background-color: white;
-	width: 8rem;
-	padding: 1rem;
-	gap: 0.5rem;
-}
 
 /*-------------------------------------------------*/
+ul{
+	list-style: none;
+}
 .item-font{
 	font-size: 1.1rem;
 }
@@ -178,7 +152,7 @@ ul{
 .li-item a::after{
 	content: "";
 	position: absolute;
-	background: #fff;
+	background: #000;
 	width: 0;
 	height: 2px;
 	bottom: 5px;
@@ -188,4 +162,297 @@ ul{
 }
 .li-item a:hover::after{
 	width: 60%;
+}
+
+/*----price----*/
+.price-car{
+	margin: 20px 0;
+	height: 12vh;
+	background-color: gray;
+	opacity: 0.7;
+}
+.text{
+	padding: 20px 0;
+	border-bottom: 1px solid;
+}
+.option{
+	margin-top: 20px;
+}
+.text h3{
+	font-size: 1.2rem;
+}
+/*car-description*/
+.description-cars{
+	padding: 20px;
+	max-width: 1400px;
+	margin: auto;
+}
+.decrip-container{
+	display: flex;
+	flex-wrap: wrap;
+}
+.year-select{
+	display: block;
+}
+.car-color{
+	flex: 20%;
+	padding: 20px;
+}
+.car-year{
+	flex: 10%;
+}
+.list-car{
+	flex: 10%;
+}
+.color-select img{
+	max-height: 20vh;
+	width: 100%;
+	padding: 20px;
+	border-radius: 25px;
+}
+.car-year{
+	padding: 10px;
+}
+.car-year h4{
+	padding: 10px 0;
+	cursor: pointer;
+}
+.car-img a{
+	padding: 10px;
+}
+.car-img{
+	position: relative;
+	flex: 60%;
+}
+.main-img{
+	display: none;
+
+}
+.main-img img{
+	max-height: 80vh;
+	width: 100%;
+	border-radius: 10px;
+}
+.main-img.active-img{
+	display: block;
+}
+a{
+	cursor: pointer;
+}
+.color-select{
+	opacity: 0.5;
+	transition: .3s ease;
+}
+.color-select.active-choose{
+	opacity: 1;
+}
+
+.title-box{
+	text-align: center;
+}
+
+/*information*/
+.infor-car{
+	max-width: 1350px;
+	margin: auto;
+	padding: 20px;
+	position: relative;
+}
+.exterior-flex{
+	display: flex;
+	flex-wrap: wrap;
+}
+.text-exterior{
+	padding: 40px;
+	flex: 60%;
+}
+.text-h4{
+	font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin-bottom: 0;
+}
+.img-exterior{
+	flex: 40%;
+}
+.img-exterior img{
+	width: 100%;
+	border-radius: 4px;
+}
+.exterior-1{
+	width: 100%;
+	padding: 10px 40px;
+}
+.text-extorior-1{
+	flex: 40%;
+}
+.text-extorior-1 img{
+	width: 100%;
+	padding: 20px 10px ;
+}
+.img-extorior-2{
+	flex: 60%;
+}
+.img{
+	width: 100%;
+}
+.furniture-flex{
+	border-top: 1px solid;
+}
+.furniture-img{
+	padding: 20px;
+	flex: 60%;
+}
+.furniture-img img{
+	border-radius: 4px;
+	width: 100%;
+}
+.furniture-textt{
+	padding: 20px;
+	flex: 40%;
+}
+.img-top{
+	width: 100%;
+	transform: translate(-2%, 3%);
+}
+.furniture-img1{
+	flex: 50%;
+	transform: translate(-30%,-25%);
+}
+.furniture-img1 h4{
+	transform: translateX(20%);
+	padding: 40px;
+}
+.furniture-text1{
+	flex: 50%;
+}
+.gear-car{
+	padding: 30px;
+	border-top: 1px solid;
+}
+.gear-car img{
+	width: 100%;
+}
+iframe{
+	width: 80%;
+	height: 600px;
+}
+
+/*footer*/
+.logo-content img{
+	width: 60px;
+	opacity: .4;
+	transition: .3s;
+}
+
+.logo-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	padding-bottom: 30px;
+	
+}
+.logo-content img:hover{
+	opacity: 1;
+}
+/*footer*/
+.footer{
+	position: relative;
+	overflow: hidden;
+	margin-top: 70px;
+	background-color: black;
+}
+
+.footer .shape_big, .footer .shape_small{
+	position: absolute;
+}
+
+.footer_container{
+	padding: 30px 0 0;
+	row-gap: 25px;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+
+.footer_logo{
+	display: inline-flex;
+	align-items: center;
+	column-gap: 25px;
+	margin-bottom: 25px;
+	transition: 0.3s;
+}
+
+.footer_logo:hover{
+	color: blue;
+}
+
+.footer_title{
+	margin-bottom: 10px;
+	color: white;
+}
+
+.footer_link{
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5rem;
+}
+
+.footer_social i{
+	font-size: 25px;
+	padding: 10px 20px 10px 0;
+	color: white;
+}
+.footer_copy{
+	color: white;
+}
+
+.footer_links,.footer_link{
+	color: white;
+	transition: 0.3s;
+	padding-top: 10px;
+}
+.footer_link:hover{
+	text-decoration: underline rgb(72, 186, 126);
+}
+
+/*responsive*/
+@media only screen and (max-width: 960px){
+	.exterior-flex{
+		display: flex;
+		flex-direction: column;
+	}
+	.furniture-img1{
+		transform: translate(0,0);
+	}
+	.furniture-img1 h4{
+		transform: translate(0,0);
+	}
+	.img-top{
+		transform: translate(0,0);
+	}
+}
+
+@media only screen and (max-width: 412px){
+	.item-left-menu{
+		display: none;
+	}
+	.car-color{
+		flex: 100%;
+		padding: 0;
+		display: flex;
+	}
+	.footer_content.c1{
+		display: none;
+	}
+	.footer_social{
+		display: flex;
+		flex-direction: column;
+	}
+	iframe{
+		width: 100%;
+		height: 300px;
+	}
 }
