@@ -435,7 +435,7 @@ iframe{
 	}
 }
 
-@media only screen and (max-width: 412px){
+@media only screen and (max-width: 460px){
 	.item-left-menu{
 		display: none;
 	}
