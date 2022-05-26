@@ -16,31 +16,38 @@
 		<video src="video/1 of 63 Lamborghini Aventador SVJ in [4K]_Trim.mp4" class="video-slide" autoplay muted loop poster="list-img/lamborghini-aventador-svj.jpg"></video>
 		<div class="menu">
 				<div class="menu-item">
-					<div class="item-left">
+
+					<div class="item-left" id="openDiv" >
+						<span class="open-overlay" onclick="openNav()"><i class="ri-list-check"></i></span>
 						<a href="#" class="brand">DINGUCAR</a>
-						<ul class="item-left-menu">
-							<li class="li-item"><a href="" class="item-font">Home</a></li>
-							<li class="li-item"><a href="" class="item-font">Store</a></li>
-							<li class="li-item"><a href="" class="item-font">Services</a></li>
-							<!-- <li class="li-item"><div href="" class="item-font financedrop">More<i class="ri-arrow-down-s-fill"></i>
-								<ul class="ul_list">
-									<li><a href="">test</a></li>
-									<li><a href="">test</a></li>
-									<li><a href="">test</a></li>
-								</ul>
-							</div></li> -->
-							<li class="li-item"><a href="#news" class="item-font">News</a></li>
-						</ul>		
+						<div class="item-left-overlay" id="myDiv">
+							<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+							<ul class="item-left-menu" >
+								<li class="li-item"><a href="" class="item-font">Home</a></li>
+								<li class="li-item"><a href="" class="item-font">Store</a></li>
+								<li class="li-item"><a href="" class="item-font">Services</a></li>
+								<li class="li-item"><a href="#news" class="item-font">News</a></li>
+							</ul>
+							<div class="item-left-menu-overlay">
+								<div class="search-overlay">
+									<div class="icon-search-overlay"></div>
+									<div class="input">
+										<input type="text" placeholder="Search">
+									</div>
+								</div>
+									<a href="" class="icon"><i class="ri-heart-line"></i></a>
+								</div>		
+						</div>
+						
 					</div>
 				<div class="item-right">
-							<div class="search">
-								<div class="icon-search"></div>
-								<div class="input">
-									<input type="text" placeholder="Search">
-								</div>
+						<div class="search">
+						<div class="icon-search"></div>
+						<div class="input">
+								<input type="text" placeholder="Search">
 							</div>
-							<a href="" class="item-right icon"><i class="ri-heart-line"></i></a>
-							
+						</div>
+						<a href="" class="icon"><i class="ri-heart-line"></i></a>
 				</div>
 			</div>
 			<div class="home-content">
@@ -560,99 +567,78 @@
 	<hr>
 	<!-- ---------------footer------------- -->
 	<footer class="footer section">
-		<div class="shape shape_big"></div>
-		<div class="shape shape_small"></div>
 
 		<div class="footer_container container grid">
 			<div class="footer_content">
 				<a href="#" class="brand footer">DINGUCAR</a>
 			</div>
 
-			<div class="footer_content content1">
-				<h3 class="footer_title">Company</h3>
+			<div class="footer_content dropdown-container">
+				<button class="footer_title dropdown-btn   ">Car buying advice</button>
 				<ul class="footer_links">
 					<li>
-						<a href="" class="footer_link ">About</a>
+						<a href="" class="footer_link ">Request advice</a>
 					</li>
 					<li>
-						<a href="" class="footer_link ">Cars</a>
+						<a href="" class="footer_link ">Book a test drive</a>
 					</li>
 					<li>
-						<a href="" class="footer_link ">History</a>
-					</li>
-					<li>
-						<a href="" class="footer_link ">Shop</a>
-					</li>
-					<li>
-						<a href="" class="footer_link ">Contact</a>
+						<a href="" class="footer_link ">Find a dealer near you</a>
 					</li>
 				</ul>
 			</div>
 
-			<div class="footer__content content1">
-				<h3 class="footer_title">Company</h3>
+			<div class="footer_content dropdown-container">
+				<button class="footer_title dropdown-btn  ">Buy Vehicle</button>
 				<ul class="footer_links">
 					<li>
-						<a href="" class="footer_link">About</a>
+						<a href="" class="footer_link">Find used vehicles</a>
 					</li>
 					<li>
-						<a href="" class="footer_link">Cars</a>
+						<a href="" class="footer_link">Find a new car</a>
 					</li>
 					<li>
-						<a href="" class="footer_link">History</a>
+						<a href="" class="footer_link">Configurator</a>
 					</li>
 					<li>
-						<a href="" class="footer_link">Shop</a>
+						<a href="" class="footer_link">Price lists & brochures</a>
 					</li>
-					<li>
-						<a href="" class="footer_link">Contact</a>
-					</li>
+			
 				</ul>
 			</div>
 
-			<div class="footer_content content1">
-				<h3 class="footer_title">Services</h3>
+			<div class="footer_content dropdown-container">
+				<button class="footer_title dropdown-btn  ">Services</button>
 				<ul class="footer_links">
 					<li>
-						<a href="" class="footer_link">About</a>
+						<a href="" class="footer_link">Book your service</a>
 					</li>
 					<li>
-						<a href="" class="footer_link">Cars</a>
+						<a href="" class="footer_link">Latest special offers</a>
 					</li>
 					<li>
-						<a href="" class="footer_link">History</a>
-					</li>
-					<li>
-						<a href="" class="footer_link">Shop</a>
-					</li>
-					<li>
-						<a href="" class="footer_link">Contact</a>
+						<a href="" class="footer_link">Recall information</a>
 					</li>
 				</ul>
 			</div>
 
 			<div class="footer_content ">
-				<h3 class="footer_title">Cars</h3>
+				<button class="footer_title dropdown-btn  ">About us</button>
 				<ul class="footer_links">
-					<li>
-						<a href="" class="footer_link">About</a>
-					</li>
-					<li>
-						<a href="" class="footer_link">Cars</a>
-					</li>
-					<li>
-						<a href="" class="footer_link">History</a>
-					</li>
-					<li>
-						<a href="" class="footer_link">Shop</a>
-					</li>
 					<li>
 						<a href="" class="footer_link">Contact</a>
 					</li>
+					<li>
+						<a href="" class="footer_link">Our history</a>
+					</li>
+					<li>
+						<a href="" class="footer_link">News & Events</a>
+					</li>
+			
 				</ul>
 			</div>
 
-			<div class="footer__content">
+			<div class="footer_content">
 			
 				<ul class="footer_social">
 					<a href="" >
@@ -673,7 +659,7 @@
 			&#169; Cuditngu. All rights reserved
 		</span>
 	</footer>
-	</div>
+	
 
 	<!-- javascript -->
 	<script type="text/javascript" src="scrollreveal.min.js"></script>

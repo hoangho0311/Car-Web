@@ -12,14 +12,27 @@
 	<div class="header-container">
 		<div class="menu">
 				<div class="menu-item">
-					<div class="item-left">
+					<div class="item-left" id="openDiv" >
+						<span class="open-overlay" onclick="openNav()"><i class="ri-list-check"></i></span>
 						<a href="#" class="brand">DINGUCAR</a>
-						<ul class="item-left-menu">
-							<li class="li-item"><a href="" class="item-font">Home</a></li>
-							<li class="li-item"><a href="" class="item-font">Store</a></li>
-							<li class="li-item"><a href="" class="item-font">Services</a></li>
-							<li class="li-item"><a href="#news" class="item-font">News</a></li>
-						</ul>		
+						<div class="item-left-overlay" id="myDiv">
+							<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+							<ul class="item-left-menu" >
+								<li class="li-item"><a href="" class="item-font">Home</a></li>
+								<li class="li-item"><a href="" class="item-font">Store</a></li>
+								<li class="li-item"><a href="" class="item-font">Services</a></li>
+								<li class="li-item"><a href="#news" class="item-font">News</a></li>
+							</ul>
+							<div class="item-left-menu-overlay">
+								<div class="search-overlay">
+									<div class="icon-search-overlay"></div>
+									<div class="input">
+										<input type="text" placeholder="Search">
+									</div>
+								</div>
+									<a href="" class="icon"><i class="ri-heart-line"></i></a>
+								</div>		
+						</div>
 					</div>
 				<div class="item-right">
 							<div class="search">
@@ -29,7 +42,6 @@
 								</div>
 							</div>
 							<a href="" class="item-right icon"><i class="ri-heart-line"></i></a>
-							<!-- <a href="" class="item-font icon"><i class="ri-user-line"></i></a> -->
 				</div>
 			</div>
 		</div>
@@ -147,15 +159,14 @@
 	<center><iframe width="560" height="315" src="https://www.youtube.com/embed/KVytgh_vJ7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 	<!-- ---------------footer------------- -->
 	<footer class="footer section">
-		
 
 		<div class="footer_container container grid">
 			<div class="footer_content">
 				<a href="#" class="brand footer">DINGUCAR</a>
 			</div>
 
-			<div class="footer_content c1">
-				<h3 class="footer_title">Car buying advice</h3>
+			<div class="footer_content dropdown-container">
+				<button class="footer_title dropdown-btn   ">Car buying advice</button>
 				<ul class="footer_links">
 					<li>
 						<a href="" class="footer_link ">Request advice</a>
@@ -169,8 +180,8 @@
 				</ul>
 			</div>
 
-			<div class="footer__content c1">
-				<h3 class="footer_title">Buy Vehicle</h3>
+			<div class="footer_content dropdown-container">
+				<button class="footer_title dropdown-btn  ">Buy Vehicle</button>
 				<ul class="footer_links">
 					<li>
 						<a href="" class="footer_link">Find used vehicles</a>
@@ -188,8 +199,8 @@
 				</ul>
 			</div>
 
-			<div class="footer_content c1">
-				<h3 class="footer_title">Services</h3>
+			<div class="footer_content dropdown-container">
+				<button class="footer_title dropdown-btn  ">Services</button>
 				<ul class="footer_links">
 					<li>
 						<a href="" class="footer_link">Book your service</a>
@@ -203,8 +214,8 @@
 				</ul>
 			</div>
 
-			<div class="footer_content">
-				<h3 class="footer_title">About us</h3>
+			<div class="footer_content ">
+				<button class="footer_title dropdown-btn  ">About us</button>
 				<ul class="footer_links">
 					<li>
 						<a href="" class="footer_link">Contact</a>
@@ -219,7 +230,7 @@
 				</ul>
 			</div>
 
-			<div class="footer__content">
+			<div class="footer_content">
 			
 				<ul class="footer_social">
 					<a href="" >
@@ -240,8 +251,19 @@
 			&#169; Cuditngu. All rights reserved
 		</span>
 	</footer>
+
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script type="text/javascript">
+		// overlay
+		function openNav() {
+		  document.getElementById("myDiv").style.width = "100%";
+		}
+
+		function closeNav() {
+		  document.getElementById("myDiv").style.width = "0%";
+		}
+
+		// onclick
 		const icons = document.querySelector('.icon-search');
 		const search=document.querySelector('.search');
 		icons.onclick = function(){
@@ -277,6 +299,24 @@
 
 			$(ImgActive3).addClass('active-img').siblings().removeClass('active-img')
 		}
+
+		var dropdown = document.getElementsByClassName("dropdown-btn");
+
+		for (var i = 0; i < dropdown.length; i++) {
+		  dropdown[i].addEventListener("click", function() {
+		    this.classList.toggle("active-drop");
+		    var dropdownContent = this.nextElementSibling;
+		    if (dropdownContent.style.display === "block") {
+		      dropdownContent.style.display = "none";
+		    } else {
+		      dropdownContent.style.display = "block";
+		    }
+		  });
+		}
+		 function dropProductCar() {
+		 	var element = document.getElementById("product-car");
+			element.classList.toggle("active-drop-list");
+		 }
 	</script>
 </body>
 </html>

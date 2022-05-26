@@ -1,3 +1,12 @@
+// overlay
+function openNav() {
+  document.getElementById("myDiv").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myDiv").style.width = "0%";
+}
+
 // animation
 const sr = ScrollReveal({
 	origin:'left',
