@@ -556,6 +556,173 @@ button{
 .footer_link:hover{
 	text-decoration: underline rgb(72, 186, 126);
 }
+/*====================================================================================*/
+.collapsible {
+    position: fixed;
+    bottom: 4%;
+    right: 1%;
+}
+
+.collapsible {
+		background-color: gray;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    text-align: left;
+    outline: none;
+    font-size: 25px;
+    border-radius: 10px;
+    border-bottom: none;
+}
+
+.content-chat {
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+.full-chat-block {
+		font-family: 'PT Sans', sans-serif;
+		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+    right: 3%;
+    bottom: 12%;
+    max-height: 0;
+    width: 350px;
+    border-radius: 12px;
+    background: white;
+    text-align: center;
+    overflow: auto;
+  	scrollbar-width: none;
+    height: max-content;
+    transition: max-height 0.2s ease-out;
+}
+.full-chat-block.active-chat{
+    max-height: 500px;
+}
+.outer-container {
+    min-height: 500px;
+    bottom: 0%;
+    position: relative;
+}
+.chatbox{
+	max-height: 390px;
+	overflow: auto;
+  scrollbar-width: none;
+  height: max-content;
+}
+.contacter{
+	display: flex;
+	width: 100%;
+	padding: 10px;
+	background-color: black;
+	color: white;
+}
+.contacter img{
+	margin-right: 10px;
+	width: 30px;
+}
+.contacter p{
+	padding: 5px;
+	font-size: 1rem;
+}
+.chat-container {
+    max-height: 500px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    scroll-behavior: smooth;
+    hyphens: auto;
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-bar-input-block {
+    display: flex;
+    float: left;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px ;
+}
+
+.chat-bar-icons {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 25%;
+    float: right;
+    font-size: 20px;
+}
+
+#chat-icon:hover {
+    opacity: .7;
+}
+
+#userInput {
+    width: 75%;
+}
+
+.input-box {
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000;
+    background-color: white;
+    outline: none
+}
+
+.userText {
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    clear: both;
+    margin: 10px 0;
+}
+
+.userText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #5ca6fa;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-right-radius: 2px;
+    max-width: 80%;
+    margin-right: 10px;
+    animation: floatup .5s forwards
+}
+
+.botText {
+    color: #000;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.botText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-left-radius: 2px;
+    max-width: 80%;
+    margin-left: 10px;
+    animation: floatup .5s forwards
+}
+
 
 /*responsive*/
 @media only screen and (max-width: 960px){
@@ -585,6 +752,12 @@ button{
 	}
 	.contact-row{
 		flex-direction: column;
+	}
+	.contact-col .input-text{
+		height: 40px;
+	}
+	.contact-col select{
+		height: 40px;
 	}
 	.menu a {
     	color: white;

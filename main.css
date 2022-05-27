@@ -353,16 +353,16 @@ ul{
 	position: absolute;
 }
 .furniture-btn{
-	transform: translate(2400%,800%);
+	transform: translate(2550%,900%);
 }
 .front-btn{
-	transform: translate(3600%,1200%);
+	transform: translate(3200%,1200%);
 }
 .back-btn{
-	transform: translate(900%,500%);
+	transform: translate(1200%,630%);
 }
 .left-btn{
-	transform: translate(1000%,1200%);
+	transform: translate(1320%,780%);
 }
 .button-car{
 	position: relative;
@@ -390,7 +390,7 @@ ul{
 }
 .overview-button .img-car{
 	opacity: 0;
-	width: 300px;
+	width: 400px;
 	border-radius: 7px;
 	transition: .3s ease;
 }
@@ -398,10 +398,10 @@ ul{
 	opacity: 1;
 }
 .furniture-img{
-	transform: translate(250%,10%);
+	transform: translate(200%,-10%);
 }
 .front-img{
-	transform: translate(370%,100%);
+	transform: translate(255%,150%);
 }
 .back-img{
 	transform: translate(-7%,-30%);

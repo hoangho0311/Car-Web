@@ -7,6 +7,7 @@
 	<link rel="icon"  href="logo1.png">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<div class="header-container">
@@ -346,7 +347,54 @@
 			</div>
 		</div>
 	</footer>
+	<!-- Chat block -->
+	<div class="content-chat">
 
+            <div class="full-chat-block" id="full-chat-block">
+                <!-- Message Container -->
+                
+                <div class="outer-container">
+                	<div class="contacter">
+                    	<img src="ASSET-USER-ADMIN.png">
+                    	<p>Admin</p>
+                	</div>
+                    <div class="chat-container">
+                    	
+                        <!-- Messages -->
+                        <div id="chatbox" class="chatbox">
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        
+
+        <button id="chat-button" type="button" class="collapsible">
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+    </div>
+
+    <script src="main.js"></script>
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<script >
 		function sendEmail(){
@@ -364,79 +412,5 @@
 		}
 	</script>
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script type="text/javascript">
-		// overlay
-		function openNav() {
-		  document.getElementById("myDiv").style.width = "100%";
-		}
-
-		function closeNav() {
-		  document.getElementById("myDiv").style.width = "0%";
-		}
-
-		// onclick
-		const icons = document.querySelector('.icon-search');
-		const search=document.querySelector('.search');
-		icons.onclick = function(){
-			search.classList.toggle('active')
-		}
-
-		// const financedrop = document.querySelector('.financedrop');
-		// financedrop.onclick = function(){
-		// 	financedrop.classList.toggle('dropactive');
-		// }
-
-		const selectImg1 = document.querySelector('.color-select1')
-		const selectImg2 = document.querySelector('.color-select2')
-		const selectImg3 = document.querySelector('.color-select3')
-		const ImgActive1 = document.querySelector('.img1');
-		const ImgActive2 = document.querySelector('.img2');
-		const ImgActive3 = document.querySelector('.img3');
-
-		selectImg1.onclick = function(){
-			$(this).addClass('active-choose').siblings().removeClass('active-choose')
-
-			$(ImgActive1).addClass('active-img').siblings().removeClass('active-img')
-		}
-
-		selectImg2.onclick = function(){
-			$(this).addClass('active-choose').siblings().removeClass('active-choose')
-
-			$(ImgActive2).addClass('active-img').siblings().removeClass('active-img')
-		}
-
-		selectImg3.onclick = function(){
-			$(this).addClass('active-choose').siblings().removeClass('active-choose')
-
-			$(ImgActive3).addClass('active-img').siblings().removeClass('active-img')
-		}
-
-		var dropdown = document.getElementsByClassName("dropdown-btn");
-
-		for (var i = 0; i < dropdown.length; i++) {
-		  dropdown[i].addEventListener("click", function() {
-		    this.classList.toggle("active-drop");
-		    var dropdownContent = this.nextElementSibling;
-		    if (dropdownContent.style.display === "block") {
-		      dropdownContent.style.display = "none";
-		    } else {
-		      dropdownContent.style.display = "block";
-		    }
-		  });
-		}
-		 function dropProductCar() {
-		 	var element = document.getElementById("product-car");
-			element.classList.toggle("active-drop-list");
-		 }
-
-		 // scroll to top
-		 ButtonScrollTop = document.getElementById("myBtn");
-		 function topFunction() {
-		  document.body.scrollTop = 0; // For Safari
-		  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-		}
-
-		
-	</script>
 </body>
 </html>
