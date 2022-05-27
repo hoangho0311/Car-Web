@@ -321,3 +321,6 @@ for (var i = 0; i < dropdown.length; i++) {
  	var element = document.getElementById("product-car");
 	element.classList.toggle("active-drop-list");
  }
+
+ // send email
+ 

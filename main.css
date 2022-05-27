@@ -714,7 +714,6 @@ ul{
 	padding: 30px;
 	max-width: 1300px;
 	margin: auto;
-	border-bottom: 1px solid white;
 }
 .row-services{
 	display: flex;
@@ -782,56 +781,7 @@ ul{
 	opacity: 1;
 }
 
-/* contact */
 
-.contact-container{
-	max-width: 1200px;
-	margin: auto;
-	text-align: center;
-	padding: 20px 0;
-}
-.contact-row{
-	display: flex;
-	flex-wrap: wrap;
-	flex-wrap: wrap;
-}
-.contact-col{
-	text-align: left;
-	padding: 30px;
-	flex: 50%;
-}
-.contact-col .input-text{
-	width: 100%;
-	height: 100%;
-}
-.contact-col select{
-	width: 100%;
-	height: 100%
-}
-.btn-contact{
-	text-align: center;
-	margin: auto;
-	width: 25%;
-  background-color: transparent;
-  margin-bottom: 10px;
-}
-.btn-contact button{
-	width: 100%;
-	text-align: center;
-	display: inline-block;
-  padding: 20px;
-  background: #BE3733;
-  clip-path: polygon(9% 0%, 100% 0%, 91% 100%, 0% 100%);
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 100%;
-  cursor: pointer;
-}
-.contact-text{
-	text-align: left;
-	padding: 20px 30px;
-	
-}
 
 /*logo-footer*/
 .logo-content img{
@@ -850,22 +800,32 @@ ul{
 .logo-content img:hover{
 	opacity: 1;
 }
-/*footer*/
+/*==================================footer==================================*/
 .footer{
 	position: relative;
 	overflow: hidden;
-	margin-top: 70px;
 }
-
+.copyright{
+	opacity: 0.8;
+	border-top: 1px solid white;
+	max-width: 1300px;
+	margin: auto;
+}
+.footer_content {
+	padding: 0 5px;
+}
+.copyright-flex{
+	display: flex;
+	padding: 10px;
+}
 .footer_container{
+	max-width: 1300px;
+	margin: auto;
 	row-gap: 25px;
 	position: relative;
 	display: flex;
 	justify-content: space-around;
-	margin-bottom: 50px;
-}
-.footer_logo:hover{
-	color: blue;
+	padding: 7% 0;
 }
 .footer_title{
 	margin-bottom: 10px;
@@ -878,6 +838,9 @@ ul{
 	display: flex;
 	flex-direction: column;
 	row-gap: 0.5rem;
+}
+.footer_title.dropdown-btn{
+	padding: 0 0 10px;
 }
 
 .footer_social i{
@@ -892,16 +855,181 @@ ul{
 .footer_links,.footer_link{
 	color: white;
 	padding-top: 10px;
-	
+	transition: .3s ease;
 }
 .footer_link:hover{
-	text-decoration: underline rgb(72, 186, 126);
+	color: gray;
 }
 
+/*=============chat-container====================*/
+.collapsible {
+    position: fixed;
+    bottom: 4%;
+    right: 1%;
+}
 
+.collapsible {
+		background-color: gray;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    text-align: left;
+    outline: none;
+    font-size: 25px;
+    border-radius: 10px;
+    border-bottom: none;
+}
+
+.content-chat {
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+.full-chat-block {
+		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+    right: 3%;
+    bottom: 12%;
+    max-height: 0;
+    width: 350px;
+    border-radius: 12px;
+    background: white;
+    text-align: center;
+    overflow: auto;
+    scrollbar-width: none;
+    height: max-content;
+    transition: max-height 0.2s ease-out;
+}
+.full-chat-block.active-chat{
+    max-height: 500px;
+}
+.outer-container {
+    min-height: 500px;
+    bottom: 0%;
+    position: relative;
+}
+
+.contacter{
+	display: flex;
+	width: 100%;
+	padding: 10px;
+	background-color: black;
+	color: white;
+}
+.contacter img{
+	width: 30px;
+}
+.chat-container {
+    max-height: 500px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    scroll-behavior: smooth;
+    hyphens: auto;
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-bar-input-block {
+    display: flex;
+    float: left;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px 0px 10px 10px;
+}
+
+.chat-bar-icons {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 25%;
+    float: right;
+    font-size: 20px;
+}
+
+#chat-icon:hover {
+    opacity: .7;
+}
+
+#userInput {
+    width: 75%;
+}
+
+.input-box {
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000;
+    background-color: white;
+    outline: none
+}
+
+.userText {
+    color: white;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    clear: both;
+    margin: 10px 0;
+}
+
+.userText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #5ca6fa;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-right-radius: 2px;
+    max-width: 80%;
+    margin-right: 10px;
+    animation: floatup .5s forwards
+}
+
+.botText {
+    color: #000;
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.botText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-left-radius: 2px;
+    max-width: 80%;
+    margin-left: 10px;
+    animation: floatup .5s forwards
+}
+
+/*===============================================================================================================*/
 /*-----responsive------*/
-@media only screen and (max-width: 920px) and (min-width: 768px){
+@media only screen and (max-width: 920px) {
   .description-flex{
+		display: block;
+	}
+	.footer_social{
+		display: flex;
+		flex-direction: column;
+	}
+	.dropdown-btn.drop-btn{
 		display: block;
 	}
 	.carOverview{
@@ -925,7 +1053,7 @@ ul{
 		transform: translate(260%,-8%);
 	}
 	.front-img{
-		transform: translate(290%,100%);
+		transform: translate(280%,100%);
 	}
 	.back-img{
 		transform: translate(-7%,-50%);
@@ -996,7 +1124,7 @@ ul{
 	}
 	.col-cars{
 		flex: 50%;
-		max-width: 350px;
+		max-width: 344px;
 	}
 	.ri-list-unordered{
 		color: black;
@@ -1013,7 +1141,7 @@ ul{
 	}
 }
 /*------mobile---------*/
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 758px){
   .description-flex{
 		display: block;
 	}
@@ -1206,9 +1334,7 @@ ul{
 	.search-overlay{
 		width: 200px;
 	}
-	.contact-col{
-		padding: 15px;
-	}
+	
 	
 	/*footer*/
 	.footer_links{
@@ -1250,9 +1376,7 @@ ul{
 	.col-cars{
 		max-width: 180px;
 	}
-	.dropdown-btn.drop-btn{
-		display: block;
-	}
+	
 	.product-car{
 		display: block;
 	}
@@ -1274,7 +1398,7 @@ ul{
 		padding: 10px;
 	}
 	.footer_social{
-		text-align: center;
+		flex-direction: row;
 	}
 }
 /*mobile */

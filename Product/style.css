@@ -7,6 +7,10 @@
 }
 body{
 	font-family: Helvetica-Light,Helvetica,Arial,sans-serif;
+
+}
+html {
+  scroll-behavior: smooth;
 }
 .logo{
 	padding-top: 10px;
@@ -385,6 +389,7 @@ a{
 	width: 100%;
 }
 iframe{
+	margin-bottom: 20px;
 	width: 80%;
 	height: 600px;
 }
@@ -398,7 +403,75 @@ button{
     font-size: 1.2rem;
     font-family: 'Dosis', sans-serif;
 }
+/* contact */
 
+.contact-container{
+	border-top: 1px solid black;
+	margin: 20px 0s;
+	max-width: 1200px;
+	margin: auto;
+	text-align: center;
+	padding: 20px 0;
+}
+.contact-row{
+	display: flex;
+	flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.contact-col{
+	text-align: left;
+	padding: 30px;
+	flex: 50%;
+}
+.contact-col .input-text{
+	width: 100%;
+	height: 100%;
+	border: 1px solid;
+}
+.contact-col select{
+	width: 100%;
+	height: 100%;
+	border: 1px solid;
+}
+.btn-contact{
+	text-align: center;
+	margin: auto;
+	width: 25%;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+.btn-contact button{
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+  padding: 20px;
+  background: #BE3733;
+  clip-path: polygon(9% 0%, 100% 0%, 91% 100%, 0% 100%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 100%;
+  cursor: pointer;
+}
+.contact-text{
+	text-align: left;
+	padding: 20px 30px;
+	
+}
+/*scroll to top*/
+.btn-to-top button{
+	background: transparent;
+	color: white;
+	text-align: center;
+	font-size: 3rem;
+	padding: 2%;
+	transition: all .4s;
+}
+.btn-to-top{
+	height: 10%;
+	margin-top: 70px;
+	background-color: black;
+	border-bottom: 1px solid white;
+}
 /*footer*/
 .logo-content img{
 	width: 60px;
@@ -422,22 +495,35 @@ button{
 	position: relative;
 	background-color: black;
 	overflow: hidden;
-	margin-top: 70px;
+	
 }
 
-
+.copyright{
+	opacity: 0.8;
+	border-top: 1px solid white;
+	max-width: 1300px;
+	margin: auto;
+}
+.copyright-flex{
+	padding: 10px;
+}
 .footer_container{
-	padding: 50px 0;
+	max-width: 1300px;
+	margin: auto;
 	row-gap: 25px;
 	position: relative;
 	display: flex;
 	justify-content: space-around;
+	padding: 7% 0;
 }
 .footer_copy{
 	color: white;
 }
-.footer_logo:hover{
-	color: blue;
+.footer_title.dropdown-btn{
+	padding: 0 0 10px;
+}
+.footer_content {
+	padding: 0 5px;
 }
 .footer_title{
 	margin-bottom: 10px;
@@ -486,6 +572,9 @@ button{
 	.img-top{
 		transform: translate(0,0);
 	}
+	.contact-col{
+		padding: 15px;
+	}
 }
 
 @media only screen and (max-width: 460px){
@@ -494,11 +583,14 @@ button{
 		padding: 0;
 		display: flex;
 	}
+	.contact-row{
+		flex-direction: column;
+	}
 	.menu a {
     	color: white;
 	}
 	.footer_social{
-		text-align: center;
+		flex-direction: row;
 	}
 	.footer_container{
 		display: block;
