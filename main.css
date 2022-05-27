@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;1,600&family=Bebas+Neue&family=Dosis:wght@300&family=Fjalla+One&family=Frank+Ruhl+Libre:wght@300;400&family=Inconsolata&family=Raleway:ital,wght@1,200&family=Saira+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;1,600&family=Bebas+Neue&family=Dosis:wght@300&family=Fjalla+One&family=Frank+Ruhl+Libre:wght@300;400&family=Inconsolata&family=PT+Sans:ital@1&family=Raleway:ital,wght@1,200&family=Saira+Condensed:wght@300&display=swap');
 *{
 	box-sizing: border-box;
 	padding: 0;
@@ -887,6 +887,7 @@ ul{
 }
 
 .full-chat-block {
+		font-family: 'PT Sans', sans-serif;
 		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     position: fixed;
     right: 3%;
@@ -897,7 +898,7 @@ ul{
     background: white;
     text-align: center;
     overflow: auto;
-    scrollbar-width: none;
+  	scrollbar-width: none;
     height: max-content;
     transition: max-height 0.2s ease-out;
 }
@@ -909,7 +910,12 @@ ul{
     bottom: 0%;
     position: relative;
 }
-
+.chatbox{
+	max-height: 390px;
+	overflow: auto;
+  scrollbar-width: none;
+  height: max-content;
+}
 .contacter{
 	display: flex;
 	width: 100%;
@@ -918,7 +924,12 @@ ul{
 	color: white;
 }
 .contacter img{
+	margin-right: 10px;
 	width: 30px;
+}
+.contacter p{
+	padding: 5px;
+	font-size: 1rem;
 }
 .chat-container {
     max-height: 500px;
@@ -943,7 +954,7 @@ ul{
     align-items: center;
     background-color: rgb(235, 235, 235);
     border-radius: 10px 10px 0px 0px;
-    padding: 10px 0px 10px 10px;
+    padding: 10px ;
 }
 
 .chat-bar-icons {
@@ -978,7 +989,6 @@ ul{
 
 .userText {
     color: white;
-    font-family: Helvetica;
     font-size: 16px;
     font-weight: normal;
     text-align: right;
@@ -1000,7 +1010,6 @@ ul{
 
 .botText {
     color: #000;
-    font-family: Helvetica;
     font-weight: normal;
     font-size: 16px;
     text-align: left;
