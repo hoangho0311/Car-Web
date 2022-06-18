@@ -228,7 +228,9 @@
 					  </select>
 					</div>
 				</div>
+				<h4 id="show-result"></h4>
 				<div class="contact-row">
+					
 					<div class="contact-col">
 						<h4><input type="checkbox" class="myCheck" > Yes, I want to test-drive the vehicle</h4>
 						<h4><input type="checkbox" class="myCheck" > Yes, I want to receive quotation</h4>
@@ -397,6 +399,8 @@
     <script src="main.js"></script>
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<script >
+		var showResult = document.getElementById("show-result")
+
 		function sendEmail(){
 			Email.send({
 			    Host : "smtp.elasticemail.com",
@@ -407,7 +411,7 @@
 			    Subject : "Welcome to DINGUCAR!",
 			    Body : "Thank you for contact. We will contact with you early" + "You can contact us in the following ways:"
 				}).then(
-				  message => alert(message)
+				  message => showResult.innerHTML = "Check your mail!!"
 			);
 		}
 	</script>

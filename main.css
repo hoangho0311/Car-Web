@@ -5,6 +5,9 @@
 	padding: 0;
 	margin: 0;
 }
+html{
+	scroll-behavior: smooth;
+}
 body{
 	font-family: Helvetica-Light,Helvetica,Arial,sans-serif;
 	background: black;
@@ -15,6 +18,7 @@ body{
 }
 a{
 	text-decoration: none;
+	color: black;
 }
 .open-overlay{
 	display: none;
@@ -80,7 +84,8 @@ a{
 	z-index: 99;
 	display: flex;
 }
-.icon{
+.icon, #cart-icon{
+	cursor: pointer;
 	padding: 27px 10px 0;
 	font-size: 1.7rem;
 }
@@ -120,7 +125,122 @@ a{
 	text-decoration: none;
 	border-radius: 15px;
 }
+/*------------------cart-----------------*/
+.cart{
+	color: black;
+	background: white;
+	position: fixed;
+	top: 0;
+	right: -100%;
+	width: 360px;
+	min-height: 100vh;
+	padding: 20px;
+	box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+	transition: .3s ease;
+	z-index: 100;
+}
+.cart.active{
+	right: 0;
+}
+.car-title{
+	text-align: center;
+	font-size: 1.5rem;
+	margin-top: 2rem;
+}
+.cart-box{
+	display: flex;
+	align-items: center;
+	margin-top: 1rem;
+}
+.cart-box a{
+	display: flex;
+}
+.cart-box a div{
+	flex: 70%;
+	text-align: center;
+	margin-top: 20px;
+}
 
+.cart-img{
+	flex: 20%;
+	width: 130px;
+	height: 100px;
+	object-fit: contain;
+	margin-right: 5px;
+}
+.cart-remove{
+	font-size: 24px;
+	color: red;
+	cursor: pointer;
+}
+.cart-box div{
+	text-align: center;
+	flex: 68%;
+}
+.cart-box i{
+	flex: 2%;
+}
+
+#close-cart{
+	position: absolute;
+	top: 1rem;
+	right: 0.8rem;
+	font-size: 2rem;
+	color: black;
+	cursor: pointer;
+}
+/*-----------------alert--------------*/
+.alert{
+	display: flex;
+	background: gray;
+	padding: 20px 40px 20px 10px;
+	min-width: 27%;
+	position: fixed;
+	left: 36%;
+	top: -10%;
+	overflow: hidden;
+	border-radius: 4px;
+	border-left: 8px solid #93939f;
+	/*border-left: 8px solid #5bd75b;*/
+    transition: 0.6s ease-out;
+	z-index: 100;
+}
+.alert h4{
+	padding: 0 10px;
+	font-size: 18px;
+	color: white;
+	/*color: black;*/
+}
+.see-more{
+	color: white;
+	text-decoration: underline blue;
+	font-size: 1.4rem;
+	cursor: pointer;
+	position: absolute;
+	right: 8%;
+	top: 50%;
+	transform: translateY(-46%);
+	padding: 20px 15px;
+	z-index: 100;
+}
+.alert .close-alert-btn{
+	background: #3c3c44;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 20px 10px;
+}
+
+.ri-close-line{
+	color: darkgrey;
+	font-size: 22px;
+	line-height: 40px;
+}
+.alert.show{
+	top: 40px;
+}
 /*-------------------search----------------*/
 .search{
 	margin-top: 25px;
@@ -313,7 +433,7 @@ ul{
   font-weight: 600;
   height: 48px;
   letter-spacing: -.8px;
-  width: 30%;
+  width: 34%;
   padding: 0 15px;
   margin-top: 20px;
   transition: all .3s;
@@ -329,11 +449,6 @@ ul{
   fill: #06f;
 }
 
-@media (min-width: 768px) {
-  .decription-button {
-    min-width: 170px;
-  }
-}
 
 /*--------------Overview------------*/
 .carOverview{
@@ -520,6 +635,8 @@ ul{
 	padding: 20px;
 	margin: 10px;
 	max-width: 350px;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 5px;
 }
 .col-cars span{
 	color: black;
@@ -651,20 +768,19 @@ ul{
 	width: 100%;
 }
 /*infor-car*/
-.overlay-infor-car {
+.overlay-infor-car {	
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   opacity: 0.8;
-  background-color:	#000;
   overflow: hidden;
   width: 100%;
   height: 0%;
   transition: .5s ease;
 }
 .col-cars:hover .overlay-infor-car {
-  height: 18%;
+  height: 15%;
 }
 .text {
   color: black;
@@ -679,25 +795,40 @@ ul{
 }
 /*overlay task todo*/
 .list-task-car{
-	padding: 5px;
+	padding: 5px 25%;
 	display: flex;
 	justify-content: space-between;
 }
 .list-task-car i{
-	font-size: 2rem;
-	color: white;
+	font-size: 1.5rem;
+	color: black;
 }
 .btn-add-to-cart{
+	cursor: pointer;
+	color: black;
 	display: flex;
+	transition: .3s ease;
 }
 .btn-add-to-cart a,.list-task-car a{
 	padding: 5px ;
 }
-.btn-add-to-cart h3{
-	color: white;
-	padding: 4px;
+.btn-add-to-cart:hover i{
+	color: blue;
 }
 
+.ri-car-line{
+	cursor: pointer;
+}
+.ri-car-line{
+	transition: .3s ease;
+}
+.ri-heart-line{
+	cursor: pointer;
+	transition: .3s ease;
+}
+.ri-heart-line:hover{
+	color: pink;
+}
 
 /*-------------services----------------*/
 .services{
@@ -820,7 +951,7 @@ ul{
 }
 .footer_container{
 	max-width: 1300px;
-	margin: auto;
+	margin: -10px auto -30px;
 	row-gap: 25px;
 	position: relative;
 	display: flex;
@@ -860,16 +991,20 @@ ul{
 .footer_link:hover{
 	color: gray;
 }
+.img-vku{
+}
+.img-vku img{
+	margin-left: 28%;
+	align-items: center;
+	width: 50%;
+}
 
 /*=============chat-container====================*/
 .collapsible {
-    position: fixed;
+	position: fixed;
     bottom: 4%;
     right: 1%;
-}
-
-.collapsible {
-		background-color: gray;
+	background-color: gray;
     color: white;
     cursor: pointer;
     width: 50px;
@@ -879,7 +1014,6 @@ ul{
     border-radius: 10px;
     border-bottom: none;
 }
-
 .content-chat {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -887,8 +1021,8 @@ ul{
 }
 
 .full-chat-block {
-		font-family: 'PT Sans', sans-serif;
-		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	font-family: 'PT Sans', sans-serif;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     position: fixed;
     right: 3%;
     bottom: 12%;
@@ -1034,6 +1168,21 @@ ul{
   .description-flex{
 		display: block;
 	}
+	.overlay-infor-car{
+		height: 15%;
+		
+	}
+	.img-vku img{
+		margin: 0;
+		width: 100%;
+	}
+	.alert{
+		left: 25%;
+		width: 49%;
+	}
+	.cart{
+		width: 450px;
+	}
 	.footer_social{
 		display: flex;
 		flex-direction: column;
@@ -1154,6 +1303,7 @@ ul{
   .description-flex{
 		display: block;
 	}
+
 	.item-left-menu .li-item{
 		padding: 30px 0 0;
 	}
@@ -1343,7 +1493,13 @@ ul{
 	.search-overlay{
 		width: 200px;
 	}
-	
+	.cart {
+		width: 100%;
+	}
+	.alert{
+		width: 100%;
+		left: 0;
+	}
 	
 	/*footer*/
 	.footer_links{

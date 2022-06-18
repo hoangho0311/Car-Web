@@ -71,6 +71,7 @@
 
 
 	// =======chat========
+	
 	function getBotResponse(input) {
 
     // Simple responses
@@ -79,7 +80,7 @@
     } else if (input == "goodbye") {
         return "Talk to you later!";
     } else {
-        return "Try asking something else!";
+        return "Wait for help!!";
     }
 }
 
@@ -140,9 +141,3 @@ function sendButton() {
     getResponse();
 }
 
-// Press enter to send a message
-$("#textInput").keypress(function (e) {
-    if (e.which == 13) {
-        getResponse();
-    }
-});

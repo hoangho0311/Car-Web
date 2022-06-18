@@ -25,7 +25,7 @@
 							<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 							<ul class="item-left-menu" >
 								<li class="li-item"><a href="" class="item-font">Home</a></li>
-								<li class="li-item"><a href="" class="item-font">Store</a></li>
+								<li class="li-item"><a href="#reviewcar" class="item-font">Store</a></li>
 								<li class="li-item"><a href="" class="item-font">Services</a></li>
 								<li class="li-item"><a href="#news" class="item-font">News</a></li>
 							</ul>
@@ -36,7 +36,7 @@
 										<input type="text" placeholder="Search">
 									</div>
 								</div>
-									<a href="" class="icon"><i class="ri-heart-line"></i></a>
+									<i class="ri-heart-line" id="cart-icon"></i>
 								</div>		
 						</div>
 						
@@ -48,7 +48,7 @@
 								<input type="text" placeholder="Search">
 							</div>
 						</div>
-						<a href="" class="icon"><i class="ri-heart-line"></i></a>
+						<i class="ri-heart-line cart-icon-2" id="cart-icon"></i>
 				</div>
 			</div>
 			<div class="home-content">
@@ -57,7 +57,41 @@
 			<a href="" class="home-content-a">Read More</a>
 			</div>
 		</div>
-	</div>
+		<div class="cart">
+				<h2 class="car-title">FAVOURITE</h2>
+				<!-- content -->
+				<div class="cart-content" id="cart-content">
+					<div class="cart-box">
+						<div class="cart-box-detail">
+							<h4 class="h4-tagName">Mercedes A-Class</h4>
+							<h3 class="price-car">3.000.000$</h3>
+						</div>
+						<img class="cart-img" src="carsDeal/iris.png">
+						<i class="ri-delete-bin-line cart-remove"></i>'
+					</div>
+					
+				</div>
+
+				<!-- total -->
+
+				
+
+				<i class="ri-close-line" id="close-cart"></i>
+			</div>
+		</div>
+		<div class="alert-container">
+			<div class="alert" >
+				<h4 class="alert-title">You have add this car on your cart</h4>
+				<span class="see-more"><i class="ri-heart-line"></i></span>
+
+				<span class="close-alert-btn">
+					<i class="ri-close-line"></i>
+				</span>
+			</div>
+		</div>
+
+		
+		
 
 	<!-- description -->
 	<div class="description-page">
@@ -66,8 +100,8 @@
 				<!-- description text -->
 				<div class="decription-text">
 					<h2>WELCOME TO DINGUCAR</h2>
-					<p>Model S is built from the ground up as an electric vehicle, with a high-strength architecture and floor-mounted battery pack for incredible occupant protection and low rollover risk. Every new Model S includes Tesla’s latest active safety features, such as Automatic Emergency Braking, at no extra cost.</p>
-					<p>Model S is built from the ground up as an electric vehicle, with a high-strength architecture and floor-mounted battery pack for incredible occupant protection and low rollover risk. Every new Model S includes Tesla’s latest active safety features, such as Automatic Emergency Braking, at no extra cost.</p>
+					<p>DINGUCAR is built from the ground up as an electric vehicle, with a high-strength architecture and floor-mounted battery pack for incredible occupant protection and low rollover risk. Experience driving excitement and passion through innovative technology and sophisticated design.</p>
+					<p>Providing customers with values from the British car brand with a global reputation and excellent quality, through market insight, premium products at affordable prices.</p>
 					<button class="decription-button">Read More</button>
 
 				</div>
@@ -135,7 +169,7 @@
 
 		<!------------ Cars  ------------------>
 <div class="container-car">
-	<div class="reviewcar">
+	<div class="reviewcar" id="reviewcar">
 		<div class="title-product">
 			<h2 class="title-list title-list-review">Our vehicles</h2>
 			<form>
@@ -155,7 +189,7 @@
 							</button>
 							<button class="btn-choose-type-car type2">
 								<img src="logoChooseCar/90f0f75a94e18564c375e1fd1d49ac89.png">
-								<input type="button" id="btn-type-rollRoyce" class="btn-type" onclick="searchcartypeRollRoyce()" value="Roll"></input>
+								<input type="button" id="btn-type-rollRoyce" class="btn-type" onclick="searchcartypeRollRoyce()" value="Rolls"></input>
 							</button>
 							<button class="btn-choose-type-car type3">
 								<img src="logoChooseCar/800px-Mercedes-Logo.svg.png">
@@ -186,54 +220,54 @@
 				<div class="row-cars" id="row-car">
 					<div class="col-cars">
 						<a href=""><h4 class="h4-tagName">Mercedes A-Class</h4>
-							<h3 class="price-car">5.000.000$</h>
-						<img src="carsDeal/iris.png">
+							<h3 class="price-car">3.000.000$</h3>
+						<img class="product-img" src="carsDeal/iris.png">
 						</a>
 						<div class="overlay-infor-car">
 						    <div class="list-task-car">
 						    	<div class="btn-add-to-cart">
 						    		<i class="ri-car-line"></i>
-						    		<h3>Learn more</h3>
+						    		
 						    	</div>
 						    	<div class="toDo-car">
-						    		<a href=""><i class="ri-eye-line"></i></a>
-						    		<a href=""><i class="ri-heart-line"></i></a>
+						    		<i class="ri-eye-line"></i>
+						    		<i class="ri-heart-line add-cart"></i>
 						    	</div>
 						    </div>
 						</div>
 					</div>
 					<div class="col-cars ">
 						<a href=""><h4 class="h4-tagName">Mercedes-Maybach S-Class</h4>
-							<h3 class="price-car">5.000.000$</h>
-						<img src="carsDeal/mercedesMayBach.png">
+							<h3 class="price-car">5.000.000$</h3>
+						<img class="product-img" src="carsDeal/mercedesMayBach.png">
 						</a>
 						<div class="overlay-infor-car">
 						    <div class="list-task-car">
 						    	<div class="btn-add-to-cart">
 						    		<i class="ri-car-line"></i>
-						    		<h3>Learn more</h3>
+						    		
 						    	</div>
 						    	<div class="toDo-car">
-						    		<a href=""><i class="ri-eye-line"></i></a>
-						    		<a href=""><i class="ri-heart-line"></i></a>
+						    		<i class="ri-eye-line"></i>
+						    		<i class="ri-heart-line add-cart"></i>
 						    	</div>
 						    </div>
 						</div>
 					</div>
 					<div class="col-cars ">
 						<a href=""><h4 class="h4-tagName">G-Class</h4>
-							<h3 class="price-car">5.000.000$</h>
-						<img src="carsDeal/mercedesg14.png">
+							<h3 class="price-car">9.000.000$</h3>
+						<img class="product-img" src="carsDeal/mercedesg14.png">
 						</a>
 						<div class="overlay-infor-car">
 						    <div class="list-task-car">
 						    	<div class="btn-add-to-cart">
 						    		<i class="ri-car-line"></i>
-						    		<h3>Learn more</h3>
+						    		
 						    	</div>
 						    	<div class="toDo-car">
-						    		<a href=""><i class="ri-eye-line"></i></a>
-						    		<a href=""><i class="ri-heart-line"></i></a>
+						    		<i class="ri-eye-line"></i>
+						    		<i class="ri-heart-line add-cart"></i>
 						    	</div>
 						    </div>
 						</div>
@@ -241,55 +275,55 @@
 				
 					<div class="col-cars ">
 						<a href=""><h4 class="h4-tagName">Lamborghini Aventador</h4>
-							<h3 class="price-car">5.000.000$</h>
-						<img src="carsDeal/lambo-adven.png">
+							<h3 class="price-car">12.000.000$</h3>
+						<img class="product-img" src="carsDeal/lambo-adven.png">
 
 						</a>
 						<div class="overlay-infor-car">
 						    <div class="list-task-car">
 						    	<div class="btn-add-to-cart">
 						    		<i class="ri-car-line"></i>
-						    		<h3>Learn more</h3>
+						    		
 						    	</div>
 						    	<div class="toDo-car">
-						    		<a href=""><i class="ri-eye-line"></i></a>
-						    		<a href=""><i class="ri-heart-line"></i></a>
+						    		<i class="ri-eye-line"></i>
+						    		<i class="ri-heart-line add-cart"></i>
 						    	</div>
 						    </div>
 						</div>
 					</div>
 					<div class="col-cars ">
 						<a href=""><h4 class="h4-tagName">Lamborghini Urus</h4>
-							<h3 class="price-car">5.000.000$</h>
-						<img src="carsDeal/Lamborghini-Urus.png">
+							<h3 class="price-car">14.000.000$</h3>
+						<img class="product-img" src="carsDeal/Lamborghini-Urus.png">
 						</a>
 						<div class="overlay-infor-car">
 						    <div class="list-task-car">
 						    	<div class="btn-add-to-cart">
 						    		<i class="ri-car-line"></i>
-						    		<h3>Learn more</h3>
+						    		
 						    	</div>
 						    	<div class="toDo-car">
-						    		<a href=""><i class="ri-eye-line"></i></a>
-						    		<a href=""><i class="ri-heart-line"></i></a>
+						    		<i class="ri-eye-line"></i>
+						    		<i class="ri-heart-line add-cart"></i>
 						    	</div>
 						    </div>
 						</div>
 					</div>
 					<div class="col-cars ">
 						<a href=""><h4 class="h4-tagName">Lamborghini Huracan</h4>
-							<h3 class="price-car">5.000.000$</h>
-						<img src="carsDeal/lambo-hucan.png">
+							<h3 class="price-car">17.000.000$</h3>
+						<img class="product-img" src="carsDeal/lambo-hucan.png">
 						</a>
 						<div class="overlay-infor-car">
 						    <div class="list-task-car">
 						    	<div class="btn-add-to-cart">
 						    		<i class="ri-car-line"></i>
-						    		<h3>Learn more</h3>
+						    		
 						    	</div>
 						    	<div class="toDo-car">
-						    		<a href=""><i class="ri-eye-line"></i></a>
-						    		<a href=""><i class="ri-heart-line"></i></a>
+						    		<i class="ri-eye-line"></i>
+						    		<i class="ri-heart-line add-cart"></i>
 						    	</div>
 						    </div>
 						</div>
@@ -297,18 +331,18 @@
 					
 					<div class="col-cars ">
 						<a href=""><h4 class="h4-tagName">Audi R8</h4>
-							<h3 class="price-car">5.000.000$</h>
-						<img src="carsDeal/audi-r8.png">
+							<h3 class="price-car">12.000.000$</h3>
+						<img class="product-img" src="carsDeal/audi-r8.png">
 						</a>
 						<div class="overlay-infor-car">
 						    <div class="list-task-car">
 						    	<div class="btn-add-to-cart">
 						    		<i class="ri-car-line"></i>
-						    		<h3>Learn more</h3>
+						    		
 						    	</div>
 						    	<div class="toDo-car">
-						    		<a href=""><i class="ri-eye-line"></i></a>
-						    		<a href=""><i class="ri-heart-line"></i></a>
+						    		<i class="ri-eye-line"></i>
+						    		<i class="ri-heart-line add-cart"></i>
 						    	</div>
 						    </div>
 						</div>
@@ -316,18 +350,18 @@
 				
 					<div class="col-cars ">
 						<a href=""><h4 class="h4-tagName">Mercedes-AMG</h4>
-							<h3 class="price-car">5.000.000$</h>
-						<img src="carsDeal/mercedesAMG.png">
+							<h3 class="price-car">8.000.000$</h3>
+						<img class="product-img" src="carsDeal/mercedesAMG.png">
 						</a>
 						<div class="overlay-infor-car">
 						    <div class="list-task-car">
 						    	<div class="btn-add-to-cart">
 						    		<i class="ri-car-line"></i>
-						    		<h3>Learn more</h3>
+						    		
 						    	</div>
 						    	<div class="toDo-car">
-						    		<a href=""><i class="ri-eye-line"></i></a>
-						    		<a href=""><i class="ri-heart-line"></i></a>
+						    		<i class="ri-eye-line"></i>
+						    		<i class="ri-heart-line add-cart"></i>
 						    	</div>
 						    </div>
 						</div>
@@ -335,18 +369,18 @@
 					
 					<div class="col-cars ">
 						<a href=""><h4 class="h4-tagName">Rolls-Royce Phantom</h4>
-							<h3 class="price-car">5.000.000$</h>
-						<img src="carsDeal/rolls-royce-phantom.png">
+							<h3 class="price-car">20.000.000$</h3>
+						<img class="product-img" src="carsDeal/rolls-royce-phantom.png">
 						</a>
 						<div class="overlay-infor-car">
 						    <div class="list-task-car">
 						    	<div class="btn-add-to-cart">
 						    		<i class="ri-car-line"></i>
-						    		<h3>Learn more</h3>
+						    		
 						    	</div>
 						    	<div class="toDo-car">
-						    		<a href=""><i class="ri-eye-line"></i></a>
-						    		<a href=""><i class="ri-heart-line"></i></a>
+						    		<i class="ri-eye-line"></i>
+						    		<i class="ri-heart-line add-cart"></i>
 						    	</div>
 						    </div>
 						</div>
@@ -354,54 +388,54 @@
 				
 					<div class="col-cars ">
 						<a href=""><h4 class="h4-tagName">Ferrari 458 Italia</h4>
-							<h3 class="price-car">5.000.000$</h>
-						<img src="carsDeal/ferrari-itali.png">
+							<h3 class="price-car">15.000.000$</h3>
+						<img class="product-img" src="carsDeal/ferrari-itali.png">
 						</a>
 						<div class="overlay-infor-car">
 						    <div class="list-task-car">
 						    	<div class="btn-add-to-cart">
 						    		<i class="ri-car-line"></i>
-						    		<h3>Learn more</h3>
+						    		
 						    	</div>
 						    	<div class="toDo-car">
-						    		<a href=""><i class="ri-eye-line"></i></a>
-						    		<a href=""><i class="ri-heart-line"></i></a>
+						    		<i class="ri-eye-line"></i>
+						    		<i class="ri-heart-line add-cart"></i>
 						    	</div>
 						    </div>
 						</div>
 					</div>
 					<div class="col-cars ">
 						<a href=""><h4 class="h4-tagName">Ferrari Roma</h4>
-							<h3 class="price-car">5.000.000$</h>
-						<img src="carsDeal/ferrari-roma.png">
+							<h3 class="price-car">9.000.000$</h3>
+						<img class="product-img" src="carsDeal/ferrari-roma.png">
 						</a>
 						<div class="overlay-infor-car">
 						    <div class="list-task-car">
 						    	<div class="btn-add-to-cart">
 						    		<i class="ri-car-line"></i>
-						    		<h3>Learn more</h3>
+						    		
 						    	</div>
 						    	<div class="toDo-car">
-						    		<a href=""><i class="ri-eye-line"></i></a>
-						    		<a href=""><i class="ri-heart-line"></i></a>
+						    		<i class="ri-eye-line"></i>
+						    		<i class="ri-heart-line add-cart"></i>
 						    	</div>
 						    </div>
 						</div>
 					</div>
 					<div class="col-cars ">
 						<a href=""><h4 class="h4-tagName">Ferrari SP48 Unica unveiled</h4>
-							<h3 class="price-car">5.000.000$</h>
-						<img src="carsDeal/ferrari-sp48.png">
+							<h3 class="price-car">5.000.000$</h3>
+						<img class="product-img" src="carsDeal/ferrari-sp48.png">
 						</a>
 						<div class="overlay-infor-car">
 						    <div class="list-task-car">
 						    	<div class="btn-add-to-cart">
 						    		<i class="ri-car-line"></i>
-						    		<h3>Learn more</h3>
+						    		
 						    	</div>
 						    	<div class="toDo-car">
-						    		<a href=""><i class="ri-eye-line"></i></a>
-						    		<a href=""><i class="ri-heart-line"></i></a>
+						    		<i class="ri-eye-line"></i>
+						    		<i class="ri-heart-line add-cart"></i>
 						    	</div>
 						    </div>
 						</div>
@@ -409,36 +443,36 @@
 				
 					<div class="col-cars ">
 						<a href=""><h4 class="h4-tagName">Vinfast LUX A2.0</h4>
-							<h3 class="price-car">5.000.000$</h>
-						<img src="carsDeal/vinfastLuxa2.0.png">
+							<h3 class="price-car">5.000.000$</h3>
+						<img class="product-img" src="carsDeal/vinfastLuxa2.0.png">
 						</a>
 						<div class="overlay-infor-car">
 						    <div class="list-task-car">
 						    	<div class="btn-add-to-cart">
 						    		<i class="ri-car-line"></i>
-						    		<h3>Learn more</h3>
+						    		
 						    	</div>
 						    	<div class="toDo-car">
-						    		<a href=""><i class="ri-eye-line"></i></a>
-						    		<a href=""><i class="ri-heart-line"></i></a>
+						    		<i class="ri-eye-line"></i>
+						    		<i class="ri-heart-line add-cart"></i>
 						    	</div>
 						    </div>
 						</div>
 					</div>
 					<div class="col-cars ">
 						<a href=""><h4 class="h4-tagName">Vinfast LUX SA2.0</h4>
-							<h3 class="price-car">5.000.000$</h>
-						<img src="carsDeal/vinfast.png">
+							<h3 class="price-car">4.000.000$</h3>
+						<img class="product-img" src="carsDeal/vinfast.png">
 						</a>
 						<div class="overlay-infor-car">
 						    <div class="list-task-car">
 						    	<div class="btn-add-to-cart">
 						    		<i class="ri-car-line"></i>
-						    		<h3>Learn more</h3>
+						    		
 						    	</div>
 						    	<div class="toDo-car">
-						    		<a href=""><i class="ri-eye-line"></i></a>
-						    		<a href=""><i class="ri-heart-line"></i></a>
+						    		<i class="ri-eye-line"></i>
+						    		<i class="ri-heart-line add-cart"></i>
 						    	</div>
 						    </div>
 						</div>
@@ -446,18 +480,18 @@
 					<!-- car -->
 					<div class="col-cars ">
 						<a href=""><h4 class="h4-tagName">Tesla Model S</h4>
-							<h3 class="price-car">5.000.000$</h>
-						<img src="carsDeal/tesla-model-s-2020.png">
+							<h3 class="price-car">8.000.000$</h3>
+						<img class="product-img" src="carsDeal/tesla-model-s-2020.png">
 						</a>
 						<div class="overlay-infor-car">
 						    <div class="list-task-car">
 						    	<div class="btn-add-to-cart">
 						    		<i class="ri-car-line"></i>
-						    		<h3>Learn more</h3>
+						    		
 						    	</div>
 						    	<div class="toDo-car">
-						    		<a href=""><i class="ri-eye-line"></i></a>
-						    		<a href=""><i class="ri-heart-line"></i></a>
+						    		<i class="ri-eye-line"></i>
+						    		<i class="ri-heart-line add-cart"></i>
 						    	</div>
 						    </div>
 						</div>
@@ -632,6 +666,9 @@
 			</div>
 		</div>
 
+		<div class="img-vku">
+			<img src="logo_mobile.png">
+		</div>
 		<div class="copyright">
 			<div class="copyright-flex">
 				<span class="footer_copy">
@@ -639,6 +676,7 @@
 				</span>
 			</div>
 		</div>
+		
 	</footer>
 	
 	<!-- Chat block -->
